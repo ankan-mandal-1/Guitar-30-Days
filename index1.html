@@ -1,331 +1,327 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Guitar in 30 Days - Flipstuck</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <title>Guitar Demo Class - The Guitar Dojo</title>
+	
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Montserrat", sans-serif;
         }
-	    .yt-video-em{
-		    width: 192px;
-    height: 340px;
-    border-radius: 12px;
-    border: none;
-    background-color: #f7f7f7;
-	    }
-        #top-container{
-            background-color: #212121;
+        html {
+            font-family: "Poppins", serif;
         }
-        .content{
-            max-width: 950px;
-            margin: auto;
-            text-align: center;
-            padding: 50px 10px 50px 10px;
-        }
-        h1{font-weight: 500;}
-        .para-head{
-            font-size: 18px; 
-            padding: 30px 0 30px 0; 
-            line-height: 1.5;
-        }
-        h1, .para-head {
+        header {
+            background-color: #01B55E;
             color: #fff;
-        }
-        .highlight {
-            color: #04FF8C;
-        }
-        .banner{
-            border-radius: 10px;
-            overflow: hidden;
-            padding: 0 20px 0 20px;
-        }
-        .banner img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-      
-        .btn {
-            background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
-            width: 100%;
-            padding: 15px 0 15px 0;
+            text-align: center;
             font-weight: 600;
-            font-size: 20px;
+            padding: 10px 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        h1{
             text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            border-radius: 60px;
-            cursor: pointer;
-            letter-spacing: 1px;
-            border: none;
-            border: 2px solid #fff;
-        }
-
-        .btn:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .mid-container {
-            background-color: #fff;
+            line-height: 1.2;
+            padding: 30px 8px;
         }
         h2{
-            font-size: 32px;
+            text-align: center;
+            font-size: 18px;
         }
-        .grid{
+        .rating {
+            border: 4px dotted #01b55e;
+            border-radius: 20px;
+            background: #e5faf1;
+            color: #01b55e;
+            font-weight: 600;
+            text-align: center;
+            max-width: 319px;
+            padding: 10px 0;
+            font-size: 14px;
+            margin: auto;
             margin-top: 20px;
-            display: flex;
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
             margin-bottom: 20px;
         }
-        .box{
-            border-radius: 8px;
-            background-color: #fde7ea;
-            padding: 30px 20px;
-            margin: 4px;
-            width: 40%;
+        .center{
+            text-align: center;
         }
-        .box img {
-            width: 72px;
-        }
-        .content-box{
-            font-size: 22px;
-            text-align: left;
-            border: 1px solid gray;
-            max-width: 350px;
-            border-radius: 8px;
-            padding: 20px;
+        .video-frame {
+            max-width: 320px;
+            height: 548px;
+            text-align: center;
             margin: auto;
-            line-height: 1.8;
-            box-shadow: 6px 6px 0px rgb(76 76 76);
-            margin-top: 25px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 8px solid #01b55e;
         }
-        p.heading {
+        .short-text{
+            text-align: center;
             font-weight: 600;
+            padding: 20px;
         }
-        .content-box .item {
-            color: rgb(80, 80, 80);
+        .course-details{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            border: 4px solid #01b55e;
+            border-radius: 10px;
+            margin: 0 20px 20px 20px;
         }
-        .faqbox{
-            text-align: left;
-            max-width: 100%;
-            margin: 20px;
+        .course-details > div {
+            border: 1px dotted #01b55e;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        .emoji {
+            font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+        }
+        .buy-btn{
+            text-align: center;
+            margin: 50px 0;
+        }
+        .btn{
+            background: #FEC501;
+    padding: 20px 28px;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+        }
+        .strike {
+            text-decoration: line-through;
+        }
+        .small-heading{
+            font-size: 28px;
+        }
+        .syllabus-box{
+            border: 5px solid #01b55e;
+    border-radius: 20px;
+    max-width: 320px;
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: #e5f9f0;
+        }
+        .syllabus-heading{
+            font-size: 22px;
+    font-weight: 700;
+    padding: 10px 0;
+        }
+        li::marker {
+            color: #01b55e;
+        }
+        .reviews {
+            text-align: center;
+        }
+        .review-image{
+            width: 90%;
+    border-radius: 10px;
+    margin: 5px 8px;
+    text-align: center;
+        }
+        .certificate {
+            text-align: center;
+            margin: 10px 0 0 0;
+        }
+        .certificate img {
+            width: 90%;
+    margin: auto;
+    border-radius: 10px;
+        }
+        .faq{
+            margin: 25px 0;
+            padding: 15px;
+
+        }
+        .question{
+            font-weight: 700;
+            margin: 35px 0 10px 0;
+        }
+        .fads {
+            padding: 12px;
+    font-size: 12px;
+    color: gray;
+        }
         footer{
             max-width: 950px;
             margin: auto;
             text-align: center;
             padding: 6px;
+            margin-bottom: 100px;
         }
 	footer a{text-decoration: none;}
-        .elementor-size-default{
-            font-size: 18px;
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-
-        @media screen and (max-width: 700px) {
-            .grid{
-            margin-top: 20px;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .box{
-            border-radius: 8px;
-            background-color: #fde7ea;
-            padding: 30px 20px;
-            margin: 4px;
-            width: 100%;
-        }
-}
+    .banner{
+        background: #ffffff;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    gap:50px;
+    box-shadow: 1px 1px 14px 5px rgb(0 0 0 / 15%);
+    }
     </style>
 </head>
 <body>
-    <div id="top-container">
-        <div class="content">
+    <header>
+        INDIA’S MOST COMPREHENSIVE GUITAR CLASS
+    </header>
+    <div class="container">
     <h1>
-        🎸 Learn <span class="highlight">Guitar</span> in Just <span class="highlight">30 Days</span><br/>
-         <span class="highlight">No Experience</span>  Needed!
+        🚀 Go from a <span style="color:#01B55E">Complete Beginner</span> to Playing Your Favorite Songs
     </h1>
-    <p class="para-head">
-        🚀 Go from a <span class="highlight">Complete Beginner</span> <br/>to Playing Your Favorite Songs  <br/> 
-        in Just <span class="highlight">One Month!</span>
-    </p>
-    <div class="banner">
-        <iframe class="yt-video-em" src="https://www.youtube.com/embed/hLaZswJiifQ"></iframe>
-    </div><br/><br/>
-    <div class="btn-box">
-        <a href='https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view'><button class="btn">Buy Now! Rs 499/-</button></a>
+    <h2>(🎸 Learn Guitar in Just a Few Days No Experience Needed)</h2>
+    <div class="rating">
+        ⭐⭐⭐⭐⭐ Rating: 4.8 | 1,369 Reviews
     </div>
-    <p class="para-head" style="padding-bottom: 20px">Have you always wanted to play the <span class="highlight">guitar</span></span> but felt it was <span class="highlight">too hard?</span> With our was <span class="highlight">step-by-step system</span>, you’ll be <span class="highlight">strumming</span> and <span class="highlight">playing real songs</span> in <span class="highlight">just 30 days</span> – even if you've never picked up a guitar before!</p>
-    
+    <div class="center">
+    <iframe src="https://player.vimeo.com/video/1059972820?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"  title="Guitar Player"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
-</div>
-
-<div class="mid-container">
-    <div class="content">
-        <h2>We have designed a<br/> flexible program for you</h2>
-        <div class="grid">
-            <div class="box"  style="background-color: #fde7ea;">
-                🎥<br/>
-                <b>Easy-to-Follow Video Lessons</b>
-                <p>No confusing theory, just simple, actionable steps.</p> 
-            </div>
-
-            <div class="box" style="background-color: #e7f3ff;">
-                🎶<br/>
-                <b>Play Your Favorite Songs Fast</b>
-                <p>Learn chords, strumming, and fingerpicking.</p> 
-            </div>
-
-            <div class="box" style="background-color: #e7f9e7;">
-                📅<br/>
-                <b>Daily Practice Plan</b>
-                <p>Just 20 minutes a day to see real progress.</p> 
-            </div>
-
-            <div class="box" style="background-color: #eff2ff;">
-                🎓<br/>
-                <b>100% Beginner-Friendly</b>
-                <p>Designed for complete beginners with zero experience.</p> 
-            </div>
-            
-            <div class="box"  style="background-color: #fde7ea;">
-                ⏰<br/>
-                <b>Lifetime Access</b>
-                <p>Learn at your own pace, anytime, anywhere.</p> 
-            </div>
-        </div>
-        <br/>
-        <h2>What exactly we will learn & build?</h2>
-        <div>
-        <div class="content-box">
-            <p class="heading">✅ Week 1: Introduction to Guitar & Basic Chords</p>
-            <div class="item"><b>Day 1:</b> Introduction to the Guitar</div>
-            <div class="item"><b>Day 2:</b> Learn How to Tune Your Guitar</div>
-            <div class="item"><b>Day 3:</b> Learn Basic Open Chords (C, G, D)</div>
-            <div class="item"><b>Day 4:</b> Practice Transitions Between C, G, and D</div>
-            <div class="item"><b>Day 5:</b> Learn Strumming Basics (Downstrokes & Upstrokes)</div>
-            <div class="item"><b>Day 6:</b> Learn Am and Em Chords</div>
-            <div class="item"><b>Day 7:</b> Practice All Chords (C, G, D, Am, Em)</div>
-        </div>
-
-        <div class="content-box">
-            <p class="heading">✅ Week 2: Expanding Chords & Strumming Patterns</p>
-            <div class="item"><b>Day 8:</b> Learn the F Major Chord</div>
-            <div class="item"><b>Day 9:</b> Introduce Strumming Patterns (4/4 and 3/4 Time)</div>
-            <div class="item"><b>Day 10:</b> Learn E Major Chord</div>
-	        <div class="item"><b>Day 11:</b> Combine E Major and E Minor</div>
-            <div class="item"><b>Day 12:</b> Learn the B Minor (Bm) Chord</div>
-            <div class="item"><b>Day 13:</b> Practice All Chords (C, G, D, Am, Em, F, Bm, E)</div>
-            <div class="item"><b>Day 14:</b> Play Your First Hindi Song (e.g., "Tum Hi Ho" from Aashiqui 2)</div>
-        </div>
-        
-        <div class="content-box">
-            <p class="heading">✅ Week 3: Building Finger Strength & Basic Song Techniques</p>
-            <div class="item"><b>Day 15:</b> Finger Exercises</div>
-            <div class="item"><b>Day 16:</b> Learn Dm, A, and Full F Major Chord (Barre)</div>
-            <div class="item"><b>Day 17:</b> Practice All Chords with Smooth Transitions</div>
-            <div class="item"><b>Day 18:</b> Learn Basic Picking Technique</div>
-            <div class="item"><b>Day 19:</b> Learn to Read Guitar Tabs</div>
-            <div class="item"><b>Day 20:</b> Learn Melody Using Tabs (e.g., "Pehla Nasha" Riff)</div>
-            <div class="item"><b>Day 21:</b> Play Song with Basic Strumming and Picking</div>
-        </div>
-
-        <div class="content-box">
-            <p class="heading">✅ Week 4: Putting It All Together</p>
-            <div class="item"><b>Day 22:</b> Learn B Major and G Major Barre Chords</div>
-            <div class="item"><b>Day 23:</b> Learn Power Chords</div>
-            <div class="item"><b>Day 24:</b> Learn 12-Bar Blues</div>
-            <div class="item"><b>Day 25:</b> Combine Techniques (Strumming, Picking, Barre Chords)</div>
-            <div class="item"><b>Day 26:</b> Play Another Hindi Song (e.g., "Channa Mereya" from Ae Dil Hai Mushkil)</div>
-            <div class="item"><b>Day 27:</b> Learn Dynamics (Soft & Loud Strumming)</div>
-            <div class="item"><b>Day 28:</b> Rhythm and Timing Practice</div>
-            <div class="item"><b>Day 29:</b> Play Simple Solo or Riff (e.g., "Dil Dhadakne Do" Riff)</div>
-            <div class="item"><b>Day 30:</b> Final Review & Full Song Performance</div>
-        </div>
-        </div>
-
-        <br/><br/>
-        <div class="btn-box" style="margin: 20px 0;">
-            <a href='https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/viewv'><button class="btn">Buy Now! Rs 499/-</button></a>
-        </div>
-
-        <h2>⭐ What Our Students Say</h2>
-        <div class="grid">
-            <div class="box"  style="background-color: #fde7ea;">
-                🌟 "I never thought I could play guitar, but this course made it SO easy! Within just a few days, I was playing my first song. Highly recommended!"
-                — Rahul M.
-            </div>
-
-            <div class="box" style="background-color: #e7f3ff;">
-                🌟 "Best beginner guitar course out there! The lessons are clear, simple, and fun. I love the structured daily plan!"
-                — Samantha K.
-            </div>
-
-            <div class="box" style="background-color: #e7f9e7;">
-                🌟 "I wasted months trying to learn from YouTube, but this course taught me in just weeks. The practice guides and backing tracks are a game changer!"
-                — Amit P.
-            </div>
-
-            <div class="box" style="background-color: #eff2ff;">
-                🌟 "This course is just very good for beginner. If you are a beginner and thinking of buying a course go for it!"
-                — Ankan M.
-            </div>
-        </div>
-
-        <h2>Certificate of Completion!</h2><br>
-        <img src="https://marketplace.canva.com/EAF7h2vFXaU/1/0/1600w/canva-blue-and-gold-elegant-curved-certificate-of-achievement-certificate-tXXLH2AOZpY.jpg" alt="" width="100%"><br/><br/>
-
-        <h2>❓ Frequently Asked Questions</h2>
-        <div class="faqbox">
-            <b>1. I have never played guitar before. Can I really learn in 30 days?</b><br/>
-            <p>Absolutely! This course is designed specifically for beginners. You’ll start with the basics and progress step by step, so you never feel lost.</p>
-            <br/><br/>
-            <b>2. Do I need an expensive guitar to start?</b><br/>
-            <p>No! You can start with any basic acoustic or electric guitar. We also provide recommendations for budget-friendly options.</p>
-            <br/><br/>
-            <b>3. How much time do I need to practice daily?</b><br>
-            <p>Just 20 minutes a day is enough to see progress! The course is designed to fit into your busy schedule.</p>
-            <br/><br/>
-            <b>4. What if I don’t like the course?</b><br>
-            <p>No worries! We offer a 100% satisfaction guarantee. If you don’t love it within the first 7 days, you’ll get a full refund.</p>
-	    <br/><br/>
-	    <b>5. How to contact us?</b><br>
-            <p>You can contact us via our email/phone - iamhelloguy@gmail.com/+917031139797</p>
-        </div>
+    <div class="short-text">
+        Our <u>step-by-step system</u> lets you strum real songs in just a Few days – no experience needed!
     </div>
-   
-</div>
-<footer>
-    <p style="text-align: left; font-size: 14px;">This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you & me) to a high standard of integrity</p>
-
-    <h2 class="elementor-heading-title elementor-size-default"><a href='https://learn.flipstuck.com/terms-conditions'>Terms &amp; Conditions</a> | 
-        <a href='https://learn.flipstuck.com/privacy-policy'>Privacy Policy</a> |
-        <a href='https://learn.flipstuck.com/disclaimer'>Disclaimer</a> |
-	<a href='https://learn.flipstuck.com/contact-us'>Contact Us</a>
-        <br>
-        2024 © Flipstuck Marketing 
+        <div class="course-details">
+            <div><div class="emoji">
+                <img src="./images/clock.png" alt="icon"/>
+            </div>Live Classes</div>
+            <div><div class="emoji">
+                <img src="./images/language.png" alt="icon"/>
+            </div>Language Hindi</div>
+            <div><div class="emoji">
+                <img src="./images/video-camera.png" alt="icon"/>
+            </div>Easy Tutorials</div>
+            <div><div class="emoji">
+                <img src="./images/high-five.png" alt="icon"/>
+            </div>Beginner Friendly</div>
+        </div>
+        <div class="buy-btn">
+            <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">GET DEMO CLASS @ ₹99/- ₹ <span class="strike"> 359</span></a>
+        </div>
+        <h2 class="small-heading">
+            We have designed a <span style="color:#01B55E">flexible program</span> for you
         </h2>
-</footer>
+        <br/>
+        <div class="syllabus-box">
+            <div class="syllabus-heading">Week 1: Introduction to Guitar & Basic Chords</div>
+            <ul>
+                <li><b>Day 1</b>: Introduction to the Guitar</li>
+                <li><b>Day 2</b>: Learn How to Tune Your Guitar</li>
+                <li><b>Day 3</b>: Learn Basic Open Chords (C, G, D)</li>
+                <li><b>Day 4</b>: Practice Transitions Between C, G, and D</li>
+                <li><b>Day 5</b>: Learn Strumming Basics (Downstrokes & Upstrokes)</li>
+                <li><b>Day 6</b>: Learn Am and Em Chords</li>
+                <li><b>Day 7</b>: Practice All Chords (C, G, D, Am, Em)</li>
+            </ul>
+        </div>
+        <div class="syllabus-box">
+            <div class="syllabus-heading">Week 2: Expanding Chords & Strumming Patterns</div>
+            <ul>
+                <li><b>Day 8</b>: Learn the F Major Chord</li>
+                <li><b>Day 9</b>: Introduce Strumming Patterns (4/4 and 3/4 Time)</li>
+                <li><b>Day 10</b>: Learn E Major Chord</li>
+                <li><b>Day 11</b>: Combine E Major and E Minor</li>
+                <li><b>Day 12</b>: Learn the B Minor (Bm) Chord</li>
+                <li><b>Day 13</b>: Practice All Chords (C, G, D, Am, Em, F, Bm, E)</li>
+                <li><b>Day 14</b>: Play Your First Hindi Song (e.g., "Tum Hi Ho" from Aashiqui 2)</li>
+            </ul>
+        </div>
+        <div class="syllabus-box">
+            <div class="syllabus-heading">Week 3: Building Finger Strength & Basic Song Techniques</div>
+            <ul>
+                <li><b>Day 15</b>: Finger Exercises</li>
+                <li><b>Day 16</b>: Learn Dm, A, and Full F Major Chord (Barre)</li>
+                <li><b>Day 17</b>: Practice All Chords with Smooth Transitions</li>
+                <li><b>Day 18</b>: Learn Basic Picking Technique</li>
+                <li><b>Day 19</b>: Learn to Read Guitar Tabs</li>
+                <li><b>Day 20</b>: Learn Melody Using Tabs (e.g., "Pehla Nasha" Riff)</li>
+                <li><b>Day 21</b>: Play Song with Basic Strumming and Picking</li>
+            </ul>
+        </div>
+        <div class="syllabus-box">
+            <div class="syllabus-heading">Week 4: Putting It All Together</div>
+            <ul>
+                <li><b>Day 22</b>: Learn B Major and G Major Barre Chords</li>
+                <li><b>Day 23</b>: Learn Power Chords</li>
+                <li><b>Day 24</b>: Learn 12-Bar Blues</li>
+                <li><b>Day 25</b>: Combine Techniques (Strumming, Picking, Barre Chords)</li>
+                <li><b>Day 26</b>: Play Another Hindi Song (e.g., "Channa Mereya" from Ae Dil Hai Mushkil)</li>
+                <li><b>Day 27</b>: Learn Dynamics (Soft & Loud Strumming)</li>
+                <li><b>Day 28</b>: Rhythm and Timing Practice</li>
+                <li><b>Day 29</b>: Play Simple Solo or Riff (e.g., "Dil Dhadakne Do" Riff)</li>
+                <li><b>Day 30</b>: Final Review & Full Song Performance</li>
+            </ul>
+        </div>
 
+        <div class="buy-btn">
+            <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">GET DEMO CLASS @ ₹99/- ₹ <span class="strike"> 359</span></a>
+        </div>
+
+        <div class="reviews">
+            <h2 class="small-heading">What Our <span style="color:#01B55E">Students</span> Say</h2><br/>
+            <img src="./images/testimonial-1.png" alt="review" class="review-image" />
+            <img src="./images/testimonial-2.png" alt="review" class="review-image" />
+            <img src="./images/testimonial-3.png" alt="review" class="review-image" />
+            <img src="./images/testimonial-4.png" alt="review" class="review-image" />
+        </div>
+
+        <div class="certificate">
+            <h2 class="small-heading">Certificate of Completion!</h2><br/>
+            <img src="./images/certificate.webp" alt="certificate" width="100%">
+        </div>
+
+        <div class="faq">
+            <h2 class="small-heading"><span style="color:#01B55E">Frequently Asked Questions</span></h2>
+            <p class="question">1. I have never played guitar before. Can I really learn in a Few days?</p>
+            <p class="answer">Absolutely! This course is designed specifically for beginners. You’ll start with the basics and progress step by step, so you never feel lost.</p>
+            <p class="question">2. Do I need an expensive guitar to start?</p>
+            <p class="answer">No! You can start with any basic acoustic or electric guitar. We also provide recommendations for budget-friendly options.</p>
+            <p class="question">3. How much time do I need to practice daily?</p>
+            <p class="answer">Just 20 minutes a day is enough to see progress! The course is designed to fit into your busy schedule.</p>
+            <p class="question">4. What if I don’t like the course?</p>
+            <p class="answer">No worries! We offer a 100% satisfaction guarantee. If you don’t love it within the first 7 days, you’ll get a full refund.</p>
+            <p class="question">5. How to contact us?</p>
+            <p class="answer">You can contact us via our email/phone - iamhelloguy@gmail.com/+917031139797</p>
+        </div>
+        <p class="fads">
+            This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you & me) to a high standard of integrity
+        </p>
+
+        <footer>
+            <h2 class="elementor-heading-title elementor-size-default"><a href='https://learn.flipstuck.com/terms-conditions'>Terms &amp; Conditions</a> | 
+                <a href='https://learn.flipstuck.com/privacy-policy'>Privacy Policy</a> |
+                <a href='https://learn.flipstuck.com/disclaimer'>Disclaimer</a> |
+            <a href='https://learn.flipstuck.com/contact-us'>Contact Us</a>
+                <br>
+                2024-2025 © Flipstuck Marketing 
+                </h2>
+        </footer>
+
+        <div class="banner">
+            <div>
+            <span style="color:#01B55E; font-weight: 700;">₹99/-</span><br/> ₹ <span class="strike"> 359</span>
+        </div>
+            <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">GET DEMO CLASS</a>
+        </div>
+    </div>
 </body>
 </html>
