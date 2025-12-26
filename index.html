@@ -318,6 +318,87 @@
         ></iframe>
 		  <script src="https://fast.wistia.net/player.js" async></script>
       </div>
+
+		<!-- Timer -->
+       <style>
+        .offer-timer {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+          }
+
+          .timer-text {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #856404;
+            font-weight: 600;
+          }
+
+          #countdown {
+            font-size: 26px;
+            font-weight: bold;
+            color: #d63333;
+          }
+
+       </style>
+       <div class="offer-timer" id="offerTimer">
+        <p class="timer-text">⏰ Beginner Offer Ends In</p>
+        <div id="countdown">
+          <span id="hours">00</span> :
+          <span id="minutes">00</span> :
+          <span id="seconds">00</span>
+        </div>
+      </div>
+      <script>
+        (function () {
+          const TIMER_KEY = "guitar_offer_end_time";
+          const HIDDEN_KEY = "guitar_offer_expired";
+          const DURATION = 24 * 60 * 60 * 1000; // 24 hours
+
+          const timerBox = document.getElementById("offerTimer");
+
+          // If already expired, hide immediately
+          if (localStorage.getItem(HIDDEN_KEY)) {
+            timerBox.style.display = "none";
+            return;
+          }
+
+          let endTime = localStorage.getItem(TIMER_KEY);
+
+          if (!endTime) {
+            endTime = Date.now() + DURATION;
+            localStorage.setItem(TIMER_KEY, endTime);
+          }
+
+          function updateTimer() {
+            const remaining = endTime - Date.now();
+
+            if (remaining <= 0) {
+              timerBox.style.display = "none"; // AUTO HIDE
+              localStorage.setItem(HIDDEN_KEY, "true");
+              localStorage.removeItem(TIMER_KEY);
+              return;
+            }
+
+            const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+            const seconds = Math.floor((remaining / 1000) % 60);
+
+            document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+          }
+
+          updateTimer();
+          setInterval(updateTimer, 1000);
+        })();
+        </script>
+      <!-- Timer Ends -->
 		
 		<!-- <br/>
 		<img src="./images/mentor-head.png" width="300px" alt="mentor"/>
@@ -591,8 +672,109 @@
         >Buy Now</a
       >
     </div>
+
+	  <!-- Recent Purchase PopUp Notification -->
+    <!-- <style>
+
+      #purchase-widget {
+        position: fixed;
+        bottom: 100px;
+        left: 10px;
+        background: #ffffff;
+        color: #000;
+        padding: 14px 16px 12px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        font-size: 14px;
+        display: none;
+        z-index: 9999;
+        max-width: 280px;
+        animation: fadeIn 0.4s ease;
+      }
+
+      #purchase-text {
+        line-height: 1.4;
+      }
+
+      #close-widget {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #999;
+      }
+
+      #close-widget:hover {
+        color: #000;
+      }
+
+      .purchase-note {
+        display: block;
+        margin-top: 4px;
+        font-size: 11px;
+        color: #777;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <div id="purchase-widget">
+      <span id="close-widget">×</span>
+      <div id="purchase-text"></div>
+      <small class="purchase-note">Recent activity</small>
+    </div>
+
+    <script>
+      const locations = ["Delhi", "Mumbai", "Bangalore", "Kolkata", "Pune", "Chennai", "Hyderabad", "Surat", "Jaipur", "Lucknow", "Nagpur"];
+
+      const widget = document.getElementById("purchase-widget");
+      const text = document.getElementById("purchase-text");
+      const closeBtn = document.getElementById("close-widget");
+
+      let isClosed = false;
+
+      function showPurchase() {
+        if (isClosed) return;
+
+        const location = locations[Math.floor(Math.random() * locations.length)];
+
+        text.innerHTML = `
+          Someone recently purchased this course from <strong>${location}</strong>
+        `;
+
+        widget.style.display = "block";
+
+        setTimeout(() => {
+          widget.style.display = "none";
+        }, 4000);
+      }
+
+      // Close button
+      closeBtn.addEventListener("click", () => {
+        widget.style.display = "none";
+        isClosed = true;
+      });
+
+      // Timing
+      setInterval(showPurchase, 5000);
+      setTimeout(showPurchase, 3000);
+  </script> -->
+
+  <!-- END - Recent Purchase PopUp Notification -->
+	  
   </body>
 </html>
+
 
 
 
