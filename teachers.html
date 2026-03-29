@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Guitar Live with Expert Teachers | Book 1-on-1 Classes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Learn guitar with expert teachers through live 1-on-1 online classes. Choose your favorite instructor, check pricing & timings, and book instantly. Perfect for beginners to advanced players.">
+    <meta name="keywords" content="learn guitar online, guitar classes online, 1 on 1 guitar lessons, live guitar classes, guitar teachers, beginner guitar lessons, online music classes, acoustic guitar lessons, electric guitar classes, guitar coaching India">
+    <meta property="og:title" content="Learn Guitar Live with Expert Teachers">
+    <meta property="og:description" content="Book 1-on-1 live guitar classes with expert teachers. Choose your instructor and start learning today.">
+    <meta property="og:type" content="website">
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+        body {
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            border-bottom: 1px solid #ddd;
+            padding: 8px 0;
+            display: flex;
+            background-color: #fff;
+            /* background: rgba(255, 255, 255, 0.2); semi-transparent */
+            /* backdrop-filter: blur(10px); */
+            /* -webkit-backdrop-filter: blur(10px); for Safari */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .logo img {
+            width: 60px;
+        }
+        
+        .hero-section {
+            padding-top: 160px;
+            text-align: center;
+            background:
+                /* Horizontal 4-color gradient */
+                linear-gradient(
+                    to right,
+                    #ffffff 0%,
+                    #ffffff 10%,
+                    #B5D1D5 30%,
+                    #ECB1EA 50%,
+                    #F3CEC4 70%,
+                    #CAF0F8 90%,
+                    #ffffff 100%
+                ),
+
+                /* Vertical fade (top → bottom) */
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 100, 255, 0.6),  /* blue tint */
+                    rgba(255, 255, 255, 1)   /* pure white */
+                );
+
+                background-blend-mode: overlay;
+        }
+        .top-sub-heading {
+            border: 1px solid #00B4D8;
+            max-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: auto;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background-color: #caf0f8;
+            color: #00B4D8;
+        }
+        .dot {
+            background-color: #00B4D8;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+        }
+        .heading {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1;
+            padding: 30px 0;
+        }
+        .bottom-sub-heading {
+            color: gray;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+        .hero-btn {
+            color: #fff;
+            background-color: #00B4D8;
+            padding: 16px 28px;
+            margin-top: 20px;
+            font-size: 20px;
+            border-radius: 28px;
+            border: none;
+        }
+
+        #teacher-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .hero-title {
+        position: relative;
+        display: inline-block;
+        }
+
+        .hero-title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        transform: translateX(-50%);
+        
+        width: 120px;
+        height: 20px;
+
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 15 Q60 0 115 15' stroke='%2300B4D8' stroke-width='3' fill='none'/%3E%3C/svg%3E") no-repeat center;
+        background-size: contain;
+        }
+
+    
+        .teachers-card {
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px
+        }
+        .card {
+            max-width: 320px;
+            border: 1px solid #efefef;
+            border-radius: 10px;
+            text-align: left;
+            margin: auto;
+        }
+        .name-rating {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 10px;
+        }
+        .name {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .rating {
+            color: gray;
+            font-size: 14px;
+        }
+        .bio {
+            color: gray;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+        .time-box{
+            margin: 12px 0;
+        }
+        .time {
+            border: 1px solid #f3f3f3;
+            background-color: #f3f3f3;
+            border-radius: 20px;
+            padding: 5px 8px;
+            margin-top: 10px;
+        }
+        .pricing {
+            display: flex;
+            padding: 15px 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .price-btn {
+            color: #fff;
+            background-color: #00B4D8;
+            border-radius: 5px;
+            border: none;
+            padding: 10px 16px;
+        }
+
+        .space {
+        margin: 30px 5px;
+        text-align: center;
+      }
+      .tip-box {
+        background-color: #fff;
+        margin: 18px 20px;
+        color: gray;
+        padding: 20px;
+        text-align: left;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    .question {
+            font-weight: 700;
+            margin: 0px 0 10px 0;
+            color: gray;
+            text-align: left;
+        }
+        .answer {
+            color: gray;
+            text-align: left;
+        }
+
+         .fads {
+            color: #bbb;
+            font-size: 12px;
+            text-align: left;
+            padding: 10px 20px;
+        }
+
+        footer {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            padding: 6px;
+            color: rgb(200, 200, 200);
+            font-size: 12px;
+        }
+        footer a {
+            text-decoration: none;
+            color: rgb(166, 166, 166);
+        }
+
+        @media only screen and (max-width: 500px) {
+            .teachers-card {
+                margin: auto;
+                padding: 20px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px
+            }
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://guitardojo.in/wp-content/uploads/2025/02/erasebg-transformed-3-150x150.png" alt="" srcset="">
+            Guitar Dojo
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="hero-section">
+            <div class="top-sub-heading">
+                <div class="dot"></div>
+                LIVE 1-ON-1 SESSIONS AVAILABLE
+            </div>
+            <div class="heading">
+                Learn Guitar<br/> Live from <br/><span style="color: #00B4D8;">Expert Teachers</span>
+            </div>
+            <div class="bottom-sub-heading">
+                Choose your favorite teacher and start your 1-on-1 journey today.
+                Personalized paths for every style from Fingerstyle to Bollywood rhythm.
+            </div>
+            <a href="#teacher-section">
+                <button class="hero-btn">Book Your First Class →</button>
+            </a>
+        </div>
+
+        <div id="teacher-section">
+            <h1 class="hero-title">List of Teachers</h1>
+            <div class="teachers-card">
+                <div class="card">
+                    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/2pw54chjrz.js" async type="module"></script><style>wistia-player[media-id='2pw54chjrz']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2pw54chjrz/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="2pw54chjrz" aspect="1.7777777777777777"></wistia-player>
+                    <div class="name-rating">
+                        <div class="name">Piyush Bafila</div>
+                        <div class="rating">⭐ 4.8</div>
+                    </div>
+                    <div class="bio">
+                        7+ years of experience <br/><br/>
+                        Day<br/>
+                        <div class="time-box">
+                        <span class="time">Saturday</span> or
+                        <span class="time">Sunday</span>
+                        </div>
+                        Time Slot<br/>
+                        <div class="time-box">
+                        <span class="time">7:00 PM</span>
+                        <span class="time">8:00 PM</span>
+                        <span class="time">9:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="price">Rs 1499/month</div>
+                            <a href="#">
+                                <button class="price-btn">Book Now</button>
+                            </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/cte1suc640.js" async type="module"></script><style>wistia-player[media-id='cte1suc640']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/cte1suc640/swatch'); display: block; filter: blur(5px); padding-top:56.43%; }</style> <wistia-player media-id="cte1suc640" aspect="1.7722222222222221"></wistia-player>
+                    <div class="name-rating">
+                        <div class="name">Deven Rai</div>
+                        <div class="rating">⭐ 4.9</div>
+                    </div>
+                    <div class="bio">
+                        6+ years of experience <br/><br/>
+                        Day<br/>
+                        <div class="time-box">
+                        <span class="time">Saturday</span> or
+                        <span class="time">Sunday</span>
+                        </div>
+                        Time Slot<br/>
+                        <div class="time-box">
+                        <span class="time">7:00 PM</span>
+                        <span class="time">8:00 PM</span>
+                        <span class="time">9:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="price">Rs 1499/month</div>
+                            <a href="#">
+                                <button class="price-btn">Book Now</button>
+                            </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/nj6lfxqi4p.js" async type="module"></script><style>wistia-player[media-id='nj6lfxqi4p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nj6lfxqi4p/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="nj6lfxqi4p" aspect="1.7777777777777777"></wistia-player>
+                    <div class="name-rating">
+                        <div class="name">Shubham Saurabh</div>
+                        <div class="rating">⭐ 4.8</div>
+                    </div>
+                    <div class="bio">
+                        8+ years of experience <br/><br/>
+                        Day<br/>
+                        <div class="time-box">
+                        <span class="time">Saturday</span> or
+                        <span class="time">Sunday</span>
+                        </div>
+                        Time Slot<br/>
+                        <div class="time-box">
+                        <span class="time">7:00 PM</span>
+                        <span class="time">8:00 PM</span>
+                        <span class="time">9:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="price">Rs 1499/month</div>
+                            <a href="#">
+                                <button class="price-btn">Book Now</button>
+                            </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ri248ppmca.js" async type="module"></script><style>wistia-player[media-id='ri248ppmca']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ri248ppmca/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="ri248ppmca" aspect="1.7777777777777777"></wistia-player>
+                    <div class="name-rating">
+                        <div class="name">Shantanu Sarkar</div>
+                        <div class="rating">⭐ 4.8</div>
+                    </div>
+                    <div class="bio">
+                        6+ years of experience <br/><br/>
+                        Day<br/>
+                        <div class="time-box">
+                        <span class="time">Saturday</span> or
+                        <span class="time">Sunday</span>
+                        </div>
+                        Time Slot<br/>
+                        <div class="time-box">
+                        <span class="time">7:00 PM</span>
+                        <span class="time">8:00 PM</span>
+                        <span class="time">9:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="pricing">
+                        <div class="price">Rs 1499/month</div>
+                            <a href="#">
+                                <button class="price-btn">Book Now</button>
+                            </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+<div class="space">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="tip-box">
+          <p class="question">
+            1. I have never played guitar before. Can I really learn in 6-12 months?
+          </p>
+          <p class="answer">
+            Yes! Most beginners start playing their first songs within about 3 months of regular practice. Everyone learns differently.
+          </p>
+        </div>
+        <div class="tip-box">
+          <p class="question">2. Do I need an expensive guitar to start?</p>
+          <p class="answer">
+            No! You can start with any basic acoustic or electric guitar. We
+            also provide recommendations for budget-friendly options.
+          </p>
+        </div>
+        <div class="tip-box">
+          <p class="question">3. How much time do I need to practice daily?</p>
+          <p class="answer">
+            Even 20-40 minutes a day can help you make steady progress. The class is
+            designed to fit into your busy schedule.
+          </p>
+        </div>
+        <div class="tip-box">
+          <p class="question">4. How to contact us?</p>
+          <p class="answer">
+            You can contact us via our email/phone - iamhelloguy@gmail.com /
+            +917031139797
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+<p class="fads">
+            This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you &amp; me) to a high standard of integrity
+            <br><br>
+            This website is not affiliated with Google LLC or any of its products or services. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+      </p>
+
+      <footer>
+        <h2 class="elementor-heading-title elementor-size-default">
+          <a href="https://lp1.guitardojo.in/terms-conditions">Terms &amp; Conditions</a> |
+          <a href="https://lp1.guitardojo.in/privacy-policy">Privacy Policy</a> |
+          <a href="https://lp1.guitardojo.in/disclaimer">Disclaimer</a> |
+          <a href="https://lp1.guitardojo.in/contact-us">Contact Us</a>
+          <br />
+          2024-2026 © Guitar Dojo
+        </h2>
+      </footer>
+    </div>
+
+</body>
+</html>
