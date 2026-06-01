@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Learn Ukulele in 30 Days — The Ukulele Dojo</title>
+<meta name="description" content="Learn Ukulele from Complete Basics — No experience needed. Progress at your own pace. Step-by-step lessons, lifetime access."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --gold:#E8A020;
+  --gold-light:#FFF3D6;
+  --gold-mid:#FFDC80;
+  --ink:#1A1208;
+  --ink-soft:#3D2E10;
+  --body:#F9F5ED;
+  --card:#FFFFFF;
+  --muted:#7A6A4F;
+  --border:#E8DEC8;
+  --green:#2D6A4F;
+  --green-bg:#E8F5EE;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--body);color:var(--ink);line-height:1.6;}
+
+/* ---- ANNOUNCEMENT BAR ---- */
+.topbar{background:var(--ink);color:var(--gold-mid);text-align:center;padding:10px 20px;font-size:13px;font-weight:500;letter-spacing:0.04em;}
+.topbar span{opacity:0.6;margin:0 10px;}
+
+/* ---- NAV ---- */
+nav{background:var(--card);border-bottom:1px solid var(--border);padding:14px 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;color:var(--ink);font-weight:700;}
+.nav-logo em{color:var(--gold);font-style:normal;}
+.nav-cta{background:var(--gold);color:var(--ink);font-weight:600;font-size:14px;padding:10px 22px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s;}
+.nav-cta:hover{background:#d08e10;}
+
+/* ---- HERO ---- */
+.hero{max-width:900px;margin:0 auto;padding:60px 5% 40px;text-align:center;}
+.hero-eyebrow{display:inline-block;background:var(--gold-light);color:var(--gold);font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px;border:1px solid var(--gold-mid);}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,62px);line-height:1.1;color:var(--ink);font-weight:900;margin-bottom:20px;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero-sub{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 36px;font-weight:300;}
+.hero-proof{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+.proof-item{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink-soft);font-weight:500;}
+.proof-dot{width:8px;height:8px;background:var(--gold);border-radius:50%;}
+
+/* ---- VIDEO SECTION ---- */
+.video-wrap{max-width:360px;margin:0 auto 50px;border-radius:16px;overflow:hidden;border:3px solid var(--gold);box-shadow:8px 8px 0 var(--gold-mid);}
+.video-wrap iframe{display:block;width:100%;height:580px;border:none;}
+
+/* ---- TIMER ---- */
+.timer-section{background:var(--ink);color:#fff;text-align:center;padding:18px 20px;margin:0 5% 50px;border-radius:12px;max-width:480px;margin-left:auto;margin-right:auto;}
+.timer-label{font-size:13px;color:var(--gold-mid);font-weight:500;margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase;}
+.timer-digits{display:flex;justify-content:center;gap:4px;align-items:center;}
+.timer-block{background:#fff1;border-radius:8px;padding:12px 16px;min-width:56px;text-align:center;}
+.timer-num{font-size:28px;font-weight:700;font-family:'Playfair Display',serif;color:#fff;line-height:1;}
+.timer-sub{font-size:10px;color:var(--gold-mid);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;}
+.timer-colon{font-size:24px;font-weight:700;color:var(--gold-mid);align-self:flex-start;margin-top:12px;}
+
+/* ---- PRICE CTA ---- */
+.price-section{text-align:center;margin-bottom:60px;}
+.price-tag{font-size:15px;color:var(--muted);margin-bottom:12px;}
+.price-tag s{color:#bbb;}
+.btn-main{display:inline-block;background:var(--gold);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:18px;font-weight:700;padding:18px 52px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;position:relative;overflow:hidden;transition:transform 0.15s,background 0.2s;}
+.btn-main:hover{background:#d08e10;transform:translateY(-2px);}
+.btn-main::after{content:'';position:absolute;top:0;left:-120%;width:60px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);transform:skewX(-20deg);animation:shine 2.8s infinite;}
+@keyframes shine{0%{left:-120%}100%{left:130%}}
+.btn-note{font-size:12px;color:var(--muted);margin-top:10px;}
+
+/* ---- SECTION HEADERS ---- */
+.section-label{text-align:center;margin-bottom:40px;}
+.section-label h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,38px);font-weight:900;color:var(--ink);}
+.section-label p{color:var(--muted);font-size:15px;margin-top:8px;}
+
+/* ---- FEATURES ---- */
+.features{max-width:780px;margin:0 auto 70px;padding:0 5%;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.feat-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px 22px;border-top:3px solid var(--gold);}
+.feat-icon{font-size:28px;margin-bottom:12px;}
+.feat-card h3{font-size:15px;font-weight:600;margin-bottom:6px;}
+.feat-card p{font-size:14px;color:var(--muted);line-height:1.5;}
+
+/* ---- SYLLABUS ---- */
+.syllabus{max-width:680px;margin:0 auto 70px;padding:0 5%;}
+.module{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:16px;overflow:hidden;}
+.module-header{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;user-select:none;}
+.module-num{background:var(--gold);color:var(--ink);font-size:13px;font-weight:700;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.module-title{font-weight:600;font-size:15px;flex:1;}
+.module-chevron{color:var(--muted);font-size:20px;transition:transform 0.25s;}
+.module.open .module-chevron{transform:rotate(180deg);}
+.module-body{display:none;padding:0 24px 20px;border-top:1px solid var(--border);}
+.module.open .module-body{display:block;}
+.lesson-list{list-style:none;padding-top:14px;}
+.lesson-list li{font-size:14px;color:var(--ink-soft);padding:7px 0;border-bottom:1px solid #f0e8d8;display:flex;align-items:center;gap:10px;}
+.lesson-list li:last-child{border-bottom:none;}
+.lesson-list li::before{content:'▸';color:var(--gold);font-size:12px;flex-shrink:0;}
+
+/* ---- WHY TABLE ---- */
+.comparison{max-width:680px;margin:0 auto 70px;padding:0 5%;}
+.comp-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border);}
+.comp-table th{padding:14px 16px;font-size:13px;font-weight:600;text-align:left;background:var(--gold-light);color:var(--ink);}
+.comp-table td{padding:13px 16px;font-size:13px;border-top:1px solid var(--border);}
+.comp-table .our{color:var(--green);font-weight:500;background:var(--green-bg);}
+.comp-table .theirs{color:#999;}
+.comp-table tr:nth-child(even) td:not(.our){background:#fafaf7;}
+
+/* ---- BONUSES ---- */
+.bonuses{max-width:680px;margin:0 auto 70px;padding:0 5%;}
+.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.bonus-card{background:var(--gold-light);border:1px solid var(--gold-mid);border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;}
+.bonus-icon{font-size:24px;flex-shrink:0;}
+.bonus-card h4{font-size:14px;font-weight:600;margin-bottom:4px;}
+.bonus-card p{font-size:13px;color:var(--ink-soft);}
+
+/* ---- TESTIMONIALS ---- */
+.testimonials{max-width:780px;margin:0 auto 70px;padding:0 5%;}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.testi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;}
+.testi-card::before{content:'\201C';font-family:'Playfair Display',serif;font-size:64px;color:var(--gold-mid);line-height:1;position:absolute;top:10px;left:18px;}
+.testi-text{font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:14px;padding-top:20px;}
+.testi-author{font-size:13px;font-weight:600;color:var(--ink);}
+.testi-stars{color:var(--gold);font-size:13px;margin-bottom:6px;}
+.testi-image-wrap{border-radius:12px;overflow:hidden;margin-bottom:14px;}
+.testi-image-wrap img{width:100%;display:block;border-radius:8px;}
+
+/* ---- MENTOR ---- */
+.mentor-section{max-width:680px;margin:0 auto 70px;padding:0 5%;}
+.mentor-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}
+.mentor-avatar{width:110px;height:110px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);flex-shrink:0;}
+.mentor-content h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:4px;}
+.mentor-title{font-size:13px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;}
+.mentor-bio{font-size:14px;color:var(--muted);line-height:1.7;}
+
+/* ---- CERT ---- */
+.cert-section{max-width:560px;margin:0 auto 70px;padding:0 5%;text-align:center;}
+.cert-section img{width:100%;border-radius:12px;border:2px solid var(--border);box-shadow:0 6px 24px rgba(0,0,0,0.08);}
+.cert-note{font-size:12px;color:var(--muted);margin-top:10px;}
+
+/* ---- FAQ ---- */
+.faq{max-width:680px;margin:0 auto 70px;padding:0 5%;}
+.faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+.faq-q{font-weight:600;font-size:15px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.faq-q span{color:var(--gold);font-size:18px;transition:transform 0.2s;flex-shrink:0;}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+.faq-a{display:none;font-size:14px;color:var(--muted);margin-top:12px;line-height:1.7;}
+.faq-item.open .faq-a{display:block;}
+
+/* ---- STICKY BANNER ---- */
+.sticky-banner{position:fixed;bottom:0;left:0;right:0;background:var(--ink);padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:200;border-top:2px solid var(--gold);}
+.sticky-left{color:#fff;}
+.sticky-left .price-now{font-size:20px;font-weight:700;color:var(--gold-mid);}
+.sticky-left .price-was{font-size:13px;color:#888;text-decoration:line-through;}
+.sticky-banner a{background:var(--gold);color:var(--ink);font-weight:700;font-size:15px;padding:12px 28px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:background 0.2s;}
+.sticky-banner a:hover{background:#d08e10;}
+
+/* ---- FOOTER ---- */
+footer{background:var(--ink);color:#888;text-align:center;padding:30px 5% 100px;font-size:13px;}
+footer a{color:#bbb;text-decoration:none;margin:0 10px;}
+footer a:hover{color:var(--gold-mid);}
+.footer-brand{font-family:'Playfair Display',serif;color:var(--gold-mid);font-size:18px;font-weight:700;margin-bottom:12px;}
+.legal{max-width:600px;margin:20px auto 0;font-size:11px;color:#555;line-height:1.6;}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:520px){
+  .hero h1{font-size:34px;}
+  .video-wrap iframe{height:460px;}
+  .mentor-card{flex-direction:column;align-items:center;text-align:center;}
+  .sticky-banner{gap:8px;}
+  .sticky-banner a{padding:10px 18px;font-size:13px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">🎵 Limited Time — Beginner Offer: ₹499 only &nbsp;<span>|</span>&nbsp; Over 500 students enrolled</div>
+
+<nav>
+  <div class="nav-logo">Ukulele <em>Dojo</em></div>
+  <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="nav-cta">Start for ₹499</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">30-Day Beginner Program</div>
+  <h1>Learn Ukulele from <em>Complete Scratch</em> — No Experience Needed</h1>
+  <p class="hero-sub">Step-by-step video lessons, 20 minutes a day, and you'll be playing real songs. Progress entirely at your own pace.</p>
+  <div class="hero-proof">
+    <div class="proof-item"><div class="proof-dot"></div> 500+ learners enrolled</div>
+    <div class="proof-item"><div class="proof-dot"></div> Lifetime access</div>
+    <div class="proof-item"><div class="proof-dot"></div> Hindi language</div>
+    <div class="proof-item"><div class="proof-dot"></div> Certificate on completion</div>
+  </div>
+</section>
+
+<div style="text-align:center;margin-bottom:40px;padding:0 5%;">
+  <div class="video-wrap">
+    <iframe src="https://fast.wistia.net/embed/iframe/ql7yrs3epc?seo=true&videoFoam=true" allow="autoplay; fullscreen" title="Course Preview"></iframe>
+  </div>
+</div>
+
+<!-- TIMER -->
+<div class="timer-section" id="offerTimer">
+  <div class="timer-label">⏰ Beginner Offer Ends In</div>
+  <div class="timer-digits">
+    <div class="timer-block"><div class="timer-num" id="th">00</div><div class="timer-sub">Hours</div></div>
+    <div class="timer-colon">:</div>
+    <div class="timer-block"><div class="timer-num" id="tm">00</div><div class="timer-sub">Mins</div></div>
+    <div class="timer-colon">:</div>
+    <div class="timer-block"><div class="timer-num" id="ts">00</div><div class="timer-sub">Secs</div></div>
+  </div>
+</div>
+
+<!-- PRICE CTA -->
+<div class="price-section">
+  <p class="price-tag">One-time payment · <s>₹799</s> → only ₹499 today</p>
+  <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn-main">Start Learning Now — ₹499</a>
+  <p class="btn-note">Secure payment via Razorpay · Instant access after purchase</p>
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+  <div class="section-label">
+    <h2>Designed Around You</h2>
+    <p>Everything you need to go from zero to playing songs confidently.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feat-card">
+      <div class="feat-icon">🎬</div>
+      <h3>Recorded Video Lessons</h3>
+      <p>No live scheduling needed. Watch anytime on any device, replay as many times as you like.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🗣️</div>
+      <h3>Taught in Hindi</h3>
+      <p>Simple, clear Hindi instruction — no confusing music jargon, just practical guidance.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">📅</div>
+      <h3>20 Min/Day Practice Plan</h3>
+      <p>A structured daily routine that fits into any busy schedule and builds real habit.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🔰</div>
+      <h3>100% Beginner Friendly</h3>
+      <p>Zero experience required. We start from how to hold the ukulele and go step by step.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">♾️</div>
+      <h3>Lifetime Access</h3>
+      <p>Learn at your own pace. Come back anytime — your access never expires.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">💬</div>
+      <h3>WhatsApp Support</h3>
+      <p>Stuck on something? Reach out directly via our private WhatsApp community for help.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SYLLABUS -->
+<div class="syllabus">
+  <div class="section-label">
+    <h2>What You'll Learn</h2>
+    <p>4 structured modules covering everything from your first chord to playing full songs.</p>
+  </div>
+
+  <div class="module open" onclick="toggleModule(this)">
+    <div class="module-header">
+      <div class="module-num">1</div>
+      <div class="module-title">Introduction to Ukulele & Basic Chords</div>
+      <div class="module-chevron">▾</div>
+    </div>
+    <div class="module-body">
+      <ul class="lesson-list">
+        <li>Introduction to the Ukulele</li>
+        <li>Tuning & Setting Up The Ukulele</li>
+        <li>How to Tune using Guitar Tuna & Metronome</li>
+        <li>Ukulele Music Basics</li>
+        <li>How to Read Chord Diagrams</li>
+        <li>Your First Chord: C Major</li>
+        <li>Learn F Major and A Minor Chords</li>
+        <li>Chord Transitions: C–F–Am</li>
+        <li>How to Strum Properly with Fingers</li>
+        <li>Row Row Row Your Boat (Normal + Simplified)</li>
+        <li>Twinkle Twinkle Little Star + Tabs</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module" onclick="toggleModule(this)">
+    <div class="module-header">
+      <div class="module-num">2</div>
+      <div class="module-title">Expanding Chords & Strumming Patterns</div>
+      <div class="module-chevron">▾</div>
+    </div>
+    <div class="module-body">
+      <ul class="lesson-list">
+        <li>Learn G Major Chord</li>
+        <li>Rhythm Control + Strumming Patterns</li>
+        <li>You Are My Sunshine (Normal + Easy)</li>
+        <li>How to Read Ukulele Tabs</li>
+        <li>Happy Birthday Tabs</li>
+        <li>Advanced Strumming: DDU UDU & DDU UDUDU</li>
+        <li>Song Suggestions & Discussion</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module" onclick="toggleModule(this)">
+    <div class="module-header">
+      <div class="module-num">3</div>
+      <div class="module-title">Finger Strength & Song Techniques</div>
+      <div class="module-chevron">▾</div>
+    </div>
+    <div class="module-body">
+      <ul class="lesson-list">
+        <li>Finger Exercises & Strength Building</li>
+        <li>Learn D Major & E Minor Chords</li>
+        <li>Chord Switching Drills</li>
+        <li>Muting Techniques</li>
+        <li>Introduction to Melody & Finger Plucking</li>
+        <li>Basic Chord Transition Practice</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module" onclick="toggleModule(this)">
+    <div class="module-header">
+      <div class="module-num">4</div>
+      <div class="module-title">Putting It All Together — Full Songs</div>
+      <div class="module-chevron">▾</div>
+    </div>
+    <div class="module-body">
+      <ul class="lesson-list">
+        <li>Can't Help Falling in Love — Tutorial</li>
+        <li>Intro to Tempo & Fingerstyle</li>
+        <li>Playing While Singing</li>
+        <li>Common Mistakes to Avoid</li>
+        <li>Perfect by Ed Sheeran</li>
+        <li>8 by Billie Eilish</li>
+        <li>Final Revision Day</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="comparison">
+  <div class="section-label">
+    <h2>Why Choose This Course?</h2>
+  </div>
+  <table class="comp-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th style="color:var(--gold)">Ukulele Dojo ✓</th>
+        <th>Other Courses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Beginner Friendly</td>
+        <td class="our">Step-by-step modules</td>
+        <td class="theirs">Random scattered lessons</td>
+      </tr>
+      <tr>
+        <td>Personal Support</td>
+        <td class="our">Private WhatsApp help</td>
+        <td class="theirs">No direct help</td>
+      </tr>
+      <tr>
+        <td>Song Practice</td>
+        <td class="our">Play real songs fast</td>
+        <td class="theirs">Mostly theory</td>
+      </tr>
+      <tr>
+        <td>Chord Transition Training</td>
+        <td class="our">Dedicated exercises</td>
+        <td class="theirs">Not focused on this</td>
+      </tr>
+      <tr>
+        <td>Lifetime Access</td>
+        <td class="our">Yes — forever</td>
+        <td class="theirs">Limited / expires</td>
+      </tr>
+      <tr>
+        <td>Mentor Guidance</td>
+        <td class="our">Motivation + feedback</td>
+        <td class="theirs">Recorded videos only</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- BONUSES -->
+<div class="bonuses">
+  <div class="section-label">
+    <h2>Free Bonuses Included</h2>
+    <p>Extras worth ₹500+ included for free with your purchase.</p>
+  </div>
+  <div class="bonus-grid">
+    <div class="bonus-card">
+      <div class="bonus-icon">📖</div>
+      <div>
+        <h4>Beginner Songbook PDF</h4>
+        <p>Your go-to reference with chords and tabs for popular songs.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-icon">🎵</div>
+      <div>
+        <h4>Strumming Pattern Guide</h4>
+        <p>Visual reference sheet for all strumming patterns taught.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-icon">🗓️</div>
+      <div>
+        <h4>30-Day Practice Routine</h4>
+        <p>A clear daily plan so you always know what to practice next.</p>
+      </div>
+    </div>
+    <div class="bonus-card">
+      <div class="bonus-icon">💬</div>
+      <div>
+        <h4>Private WhatsApp Community</h4>
+        <p>Connect with fellow learners and get your doubts resolved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials">
+  <div class="section-label">
+    <h2>What Our Students Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-image-wrap"><img src="./images/ukulele/testimonial-1.jpg" alt="Riya S. testimonial" loading="lazy"/></div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Never thought I could play songs this fast! The lessons are super beginner-friendly and so easy to follow.</p>
+      <div class="testi-author">— Riya S.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-image-wrap"><img src="./images/ukulele/testimonial-2.jpg" alt="Aman K. testimonial" loading="lazy"/></div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">I started with zero knowledge and within a few days I was already playing chords confidently. Amazing!</p>
+      <div class="testi-author">— Aman K.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-image-wrap"><img src="./images/ukulele/testimonial-3.jpg" alt="Neha P. testimonial" loading="lazy"/></div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Simple, clear, and motivating. Perfect for complete beginners — the teaching style just clicks.</p>
+      <div class="testi-author">— Neha P.</div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-image-wrap"><img src="./images/ukulele/testimonial-4.jpg" alt="Rahul M. testimonial" loading="lazy"/></div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Step-by-step explanations made everything clear. This course made learning ukulele genuinely fun.</p>
+      <div class="testi-author">— Rahul M.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICE CTA 2 -->
+<div class="price-section" style="margin-bottom:70px;">
+  <p class="price-tag">One-time payment · <s>₹799</s> → only ₹499 today</p>
+  <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn-main">Enroll Now — ₹499</a>
+  <p class="btn-note">500+ students already enrolled · Lifetime access · Instant delivery</p>
+</div>
+
+<!-- CERTIFICATE -->
+<div class="cert-section">
+  <div class="section-label">
+    <h2>Certificate of Completion</h2>
+    <p>Finish the course and earn your certificate.</p>
+  </div>
+  <img src="./images/certificate.webp" alt="Course completion certificate" loading="lazy"/>
+  <p class="cert-note">Note: This is a course completion certificate, not an official music qualification.</p>
+</div>
+
+<!-- MENTOR -->
+<div class="mentor-section">
+  <div class="section-label">
+    <h2>Meet Your Mentor</h2>
+  </div>
+  <div class="mentor-card">
+    <img src="./images/ukulele/profile-sudar.jpg" alt="Sudarshana — your mentor" class="mentor-avatar"/>
+    <div class="mentor-content">
+      <h3>Sudarshana</h3>
+      <div class="mentor-title">Musician & Instructor · 8+ Years Experience</div>
+      <p class="mentor-bio">Sudarshana is a passionate musician who has helped hundreds of beginners start their musical journey with confidence. His simple, practical teaching style makes learning easy, fun, and stress-free. From basic chords to playing full songs, he breaks everything down step-by-step — no complicated music theory required.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+  <div class="section-label">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-item open" onclick="toggleFaq(this)">
+    <div class="faq-q">I've never played ukulele before — can I really learn in 30 days? <span>+</span></div>
+    <div class="faq-a">Yes! Most beginners start playing their first songs within about 30 days of regular practice. Everyone learns at a different pace, which is why this course is fully self-paced.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Do I need an expensive ukulele to start? <span>+</span></div>
+    <div class="faq-a">Not at all. Any basic acoustic ukulele works. We also provide recommendations for budget-friendly options so you can get started without overspending.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How much time do I need to practice each day? <span>+</span></div>
+    <div class="faq-a">Even 20 minutes a day is enough to make steady progress. The course is designed to fit into busy schedules — consistency matters more than duration.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What if I'm not happy with the course? <span>+</span></div>
+    <div class="faq-a">If you face any issues, our support team is available to help throughout your learning journey. Reach us anytime via email or WhatsApp.</div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I contact you? <span>+</span></div>
+    <div class="faq-a">Email us at iamhelloguy@gmail.com or call/WhatsApp us at +91 70311 39797. We're happy to help.</div>
+  </div>
+</div>
+
+<!-- STICKY BANNER -->
+<div class="sticky-banner">
+  <div class="sticky-left">
+    <div class="price-now">₹499</div>
+    <div class="price-was">₹799</div>
+  </div>
+  <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view">Buy Now — Limited Offer</a>
+</div>
+
+<footer>
+  <div class="footer-brand">Ukulele Dojo</div>
+  <div>
+    <a href="./terms-conditions">Terms & Conditions</a>
+    <a href="./privacy-policy">Privacy Policy</a>
+    <a href="./disclaimer">Disclaimer</a>
+    <a href="./contact-us">Contact Us</a>
+  </div>
+  <p style="margin-top:12px;">2024–2026 © Guitar Dojo</p>
+  <p class="legal">This site is not affiliated with Facebook™, Google LLC, or their products. Results may vary based on individual effort and practice. This website cannot and does not make guarantees about your ability to learn at any specific pace.</p>
+</footer>
+
+<script src="https://fast.wistia.net/player.js" async></script>
+
+<script>
+// Countdown timer
+(function(){
+  const KEY='uke_end_time', HIDE='uke_expired', DUR=24*60*60*1000;
+  const box=document.getElementById('offerTimer');
+  if(localStorage.getItem(HIDE)){box.style.display='none';return;}
+  let end=localStorage.getItem(KEY);
+  if(!end){end=Date.now()+DUR;localStorage.setItem(KEY,end);}
+  function tick(){
+    const r=end-Date.now();
+    if(r<=0){box.style.display='none';localStorage.setItem(HIDE,'1');localStorage.removeItem(KEY);return;}
+    document.getElementById('th').textContent=String(Math.floor(r/3600000)).padStart(2,'0');
+    document.getElementById('tm').textContent=String(Math.floor((r%3600000)/60000)).padStart(2,'0');
+    document.getElementById('ts').textContent=String(Math.floor((r%60000)/1000)).padStart(2,'0');
+  }
+  tick();setInterval(tick,1000);
+})();
+
+// Module accordion
+function toggleModule(el){el.classList.toggle('open');}
+
+// FAQ accordion
+function toggleFaq(el){el.classList.toggle('open');}
+</script>
+</body>
+</html>
