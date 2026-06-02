@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start Playing Ukulele in Just 30 Days (Beginner Friendly) - The Guitar Dojo</title>
-    <!-- Meta Pixel Code -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start Playing Ukulele in Just 30 Days (Beginner Friendly) - The Guitar Dojo</title>
+  
+<!-- Meta Pixel Code -->
       <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,917 +29,987 @@
 	  <!-- Microsoft Clarity -->
 
 	  <!-- End Microsoft Clarity -->
-	  
-<!-- HTML Meta Tags -->
-<meta name="description" content="Learn Ukulele from Complete Basics - No experience needed. Progress at your own pace. Step-by-Step lessons and access the videos from anywhere using any device.">
+	
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@lucide/lab@latest/dist/lucide-lab.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Start Playing Basic Ukulele in Just 30 Days (Beginner Friendly) - The Ukulele Dojo">
-<meta property="og:description" content="Learn Ukulele from Complete Basics - No experience needed. Progress at your own pace. Step-by-Step lessons and access the videos from anywhere using any device.">
-<meta property="og:image" content="https://raw.githubusercontent.com/ankan-mandal-1/Ukulele-30-Days/refs/heads/main/images/ukulele/fallback.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+  <style>
+    :root {
+      --bg-main: #0B0F19;
+      --bg-card: #1E293B;
+      --bg-card-hover: #26344E;
+      --accent-gold: #FBBF24;
+      --accent-gold-hover: #F59E0B;
+      --accent-green: #34D399;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --glass-bg: rgba(30, 41, 59, 0.7);
+    }
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Start Playing Basic Ukulele in Just 30 Days (Beginner Friendly) - The Ukulele Dojo">
-<meta name="twitter:description" content="Learn Ukulele from Complete Basics - No experience needed. Progress at your own pace. Step-by-Step lessons and access the videos from anywhere using any device.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/ankan-mandal-1/Ukulele-30-Days/refs/heads/main/images/ukulele/fallback.jpg">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<!-- Meta Tags Generated via https://opengraph.dev -->
-	  
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        font-family: "Poppins", serif;
-        background-color: #0c0c0c;
-      }
-      header {
-        background-color: #ffd166;
-        text-align: center;
-        font-weight: 600;
-        padding: 10px 6px;
-      }
-      header img {
-        width: 70px;
-      }
-		.logo-header {
-			text-align: center;
-    		margin-top: 20px;
-		} 
-		.logo-header img {
-			width: 95px;
-			height: 95px;
-    		border-radius: 25px;
-		}
-      .container {
-        max-width: 500px;
-        margin: auto;
-        text-align: center;
-      }
-      h1 {
-        color: #fff;
-        padding: 20px 0 30px 0;
-        line-height: 1.2;
-      }
-      .sub-heading {
-        color: #fff;
-        padding: 20px 5px 0 5px;
-      }
-      .rating-price-trust {
-        color: #fff;
-        margin: 50px 0;
-      }
-      /* .btn {
-        color: #0c0c0c;
-        background-color: #ffd166;
-        padding: 20px 60px;
-        font-weight: 600;
-        font-family: "Poppins";
-        font-size: 18px;
-        margin: 5px 5px;
-        border-radius: 5px;
-        border: none;
-      } */
+    html {
+      scroll-behavior: smooth;
+    }
 
-		/*----------Button with Glare Effect----------*/
-      .btn {
-          position: relative;
-          overflow: hidden;
-          color: #0c0c0c;
-          background-color: #ffd166;
-          padding: 20px 60px;
-          font-weight: 600;
-          font-family: "Poppins";
-          font-size: 18px;
-          margin: 5px 5px;
-          border-radius: 5px;
-          border: none;
-          cursor: pointer;
-      }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 90px;
+    }
 
-      /* Glare Effect */
-      .btn:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -135%;
-          height: 100%;
-          width: 40px;
-          background: linear-gradient(
-              to right,
-              rgba(255,255,255,0) 0%,
-              rgba(255,255,255,0.7) 50%,
-              rgba(255,255,255,0) 100%
-          );
-          transform: skew(-45deg);
-          mix-blend-mode: plus-lighter;
-          animation: glare 2.5s infinite linear;
-      }
+    /* Top Ticker */
+    .top-ticker {
+      background: linear-gradient(90deg, #F59E0B, #FBBF24);
+      color: #0F172A;
+      text-align: center;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 16px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
 
-      /* Animation */
-      @keyframes glare {
-          0% {
-              left: -135%;
-          }
-          100% {
-              left: 130%;
-          }
-      }
-/*----------Button with Glare Effect----------*/
-		
-      .strike {
-          text-decoration: line-through;
-      }
-      .center {
-        text-align: center;
-      }
-      .video-frame {
-        max-width: 320px;
-        /* width: 346px;  */
-        height: /* 200px; */  548px;
-        text-align: center;
-        margin: auto;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 6px solid #ffd166;
-      }
-      h2 {
-        color: #ffd166;
-      }
-      .tip-box {
-        background-color: #212121;
-        margin: 18px 20px;
-        color: #fff;
-        padding: 20px;
-        text-align: left;
-        border-radius: 5px;
-      }
-      .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
-      .lesson {
-        border-bottom: 1px solid #4b4b4b;
-        padding: 24px 0;
-      }
-      .space {
-        margin: 30px 5px;
-      }
-      .testimonial {
-        width: 90%;
-        border-radius: 10px;
-        margin: 4px;
-      }
-      .question {
-        font-weight: 700;
-        margin: 0px 0 10px 0;
-        color: #fff;
-        text-align: left;
-      }
-      .answer {
-        color: #fff;
-        text-align: left;
-      }
-      .fads {
-        color: #fff;
-        font-size: 12px;
-        text-align: left;
-        padding: 20px;
-      }
-      footer {
-        max-width: 950px;
-        margin: auto;
-        text-align: center;
-        padding: 6px;
-        margin-bottom: 100px;
-      }
-      footer a {
-        text-decoration: none;
-        color: #fff;
-      }
-      .banner {
-        background: #212121;
-        margin: 0;
-        width: 100%;
-        position: fixed;
-        bottom: -1px;
-        right: 0;
-        left: 0;
-        padding: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px 10px 0 0;
-        gap: 50px;
-        box-shadow: 1px 1px 14px 5px rgb(0 0 0 / 15%);
-      }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-		.gif_box {
-        text-align: center;
-        padding: 8px 0;
-      }
-      .animated_img {
-        border-radius: 10px;
-		width: 100%;
-      }
+    /* Brand Logo styling */
+    .logo-container {
+      text-align: center;
+      margin: 32px 0 16px 0;
+    }
+    .logo-container img {
+      width: 75px;
+      height: 75px;
+      border-radius: 18px;
+      border: 2px solid var(--border-color);
+    }
 
-      /*-------Mentor----------*/
-      .mentor {
-        text-align: center;
-        border: 1px solid #dbdbdb;
-        margin: 20px;
-        padding: 10px;
-        border-radius: 10px;
-      }
-      .mentor-img {
-        border-radius: 50%;
-        width: 135px;
-      }
-      .mentor-name {
-        font-size: 18px;
-        font-weight: 600;
-        color: #fff;
-      }
-      .mentor-bio {
-        text-align: left;
-        padding: 15px 5px;
-        color: #b5b5b5;
-      }
+    /* Typography styling */
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.3;
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+    }
+    h1 span.highlight {
+      color: var(--accent-gold);
+      background: linear-gradient(120deg, rgba(251, 191, 36, 0.1) 0%, rgba(251, 191, 36, 0) 100%);
+      padding: 0 4px;
+    }
+    h1 span.underline {
+      border-bottom: 3px solid var(--accent-gold);
+    }
 
-		/*---------Comparison Table---------*/
-		.container-comparison{
-  padding:20px;
-  max-width:500px;
-  margin:auto;
-  color: #fff;
-}
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: center;
+      margin: 48px 0 24px;
+      letter-spacing: -0.3px;
+    }
 
-h2{
-  text-align:center;
-  margin-bottom:15px;
-}
+    /* Video Frame Container */
+    .video-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 3px solid var(--accent-gold);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      background: #000;
+      aspect-ratio: 9 / 16;
+      max-height: 520px;
+      margin: 0 auto 32px;
+    }
+    .video-frame {
+      width: 100%;
+      height: 100%;
+    }
 
-.table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
-  background:#1a1a1a;
-  border-radius:12px;
-  overflow:hidden;
-}
+    /* Countdown Timer */
+    .timer-card {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      margin: 24px 0;
+      backdrop-filter: blur(8px);
+    }
+    .timer-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #FCA5A5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .timer-display {
+      font-size: 24px;
+      font-weight: 800;
+      color: #EF4444;
+      font-variant-numeric: tabular-nums;
+    }
 
-.table th,.table td{
-  border:1px solid #515151;
-  padding:12px;
-  font-size:14px;
-}
+    /* Sub-text and CTA elements */
+    .sub-heading {
+      font-size: 16px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 24px;
+    }
 
-.table th{
-  background:#222;
-  color:#fff;
-}
+    .social-proof-text {
+      font-size: 14px;
+      color: var(--accent-green);
+      font-weight: 600;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
 
-.highlight{
-  background:#103d1f;
-  color:#7dff9a;
-  font-weight:600;
-}
+    /* CTA Button Architecture */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-hover) 100%);
+      color: #0F172A;
+      padding: 18px 32px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(251, 191, 36, 0.25);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(251, 191, 36, 0.4);
+    }
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    .btn-primary .strike {
+      text-decoration: line-through;
+      opacity: 0.6;
+      font-weight: 400;
+      font-size: 15px;
+    }
+    /* Button Glare Refinement */
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -150%;
+      height: 100%;
+      width: 45px;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+      transform: skew(-45deg);
+      animation: modernGlare 3s infinite ease-in-out;
+    }
+    @keyframes modernGlare {
+      0% { left: -150%; }
+      50% { left: 150%; }
+      100% { left: 150%; }
+    }
 
-.bonus{
-  background:#1a1a1a;
-  padding:15px;
-  border-radius:12px;
-  margin-top:20px;
-  border:1px solid #333;
-}
+    /* Feature Value Props Cards */
+    .grid-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .feature-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .feature-card:hover {
+      border-color: rgba(251, 191, 36, 0.3);
+      background-color: var(--bg-card-hover);
+    }
+    .feature-icon-wrapper {
+      background: rgba(251, 191, 36, 0.1);
+      color: var(--accent-gold);
+      padding: 10px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feature-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .feature-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
 
-.bonus h3{
-  margin-top:0;
-}
+    /* Syllabus Structure / Interactive Modules */
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .module-header {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(255,255,255,0.02);
+    }
+    .module-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-align: left;
+    }
+    .module-num-badge {
+      color: var(--accent-gold);
+      font-weight: 800;
+      font-size: 15px;
+    }
+    .module-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .module-chevron {
+      color: var(--text-muted);
+      transition: transform 0.3s ease;
+    }
+    .module-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    }
+    .module-content.open {
+      max-height: 2000px;
+      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+    }
+    .gif-container {
+      padding: 0 20px;
+      margin-top: 10px;
+    }
+    .gif-container img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .lessons-list {
+      padding: 10px 20px 20px 20px;
+    }
+    .lesson-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      text-align: left;
+    }
+    .lesson-item:last-child {
+      border-bottom: none;
+    }
+    .lesson-item i {
+      color: var(--accent-gold);
+      flex-shrink: 0;
+    }
 
-.footer-text{
-  text-align:center;
-  font-size:12px;
-  color:#aaa;
-  margin-top:20px;
-}
+    /* Comparison matrix container Grid */
+    .matrix-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 24px;
+      margin: 40px 0;
+    }
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+    }
+    .matrix-table th {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 8px 12px;
+      letter-spacing: 0.5px;
+    }
+    .matrix-table td {
+      padding: 14px 12px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .matrix-table td:first-child {
+      border-left: 1px solid var(--border-color);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      font-weight: 600;
+      text-align: left;
+    }
+    .matrix-table td:last-child {
+      border-right: 1px solid var(--border-color);
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: var(--text-muted);
+    }
+    .matrix-table td.highlighted-cell {
+      background: rgba(52, 211, 153, 0.06);
+      border-top: 1px solid rgba(52, 211, 153, 0.2);
+      border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+    
+    /* Bonuses Box block */
+    .bonus-box {
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px dashed rgba(251, 191, 36, 0.4);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      text-align: left;
+    }
+    .bonus-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bonus-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .bonus-item:last-child { margin-bottom: 0; }
+    .bonus-item i { color: var(--accent-green); }
 
-		/*-------Comparsion Table End------*/
+    /* Testimonials Review Blocks */
+    .testimonial-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: left;
+    }
+    .testimonial-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border-color);
+    }
+    .testimonial-quote {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-main);
+    }
 
-		/* @media screen and (max-width: 350px) {
-        .video-frame {
-          width: 320px; 
-          height: 200px; /* 548px; */
-        /* }
-        .btn {
-          padding: 20px 40px;
-        }
-      } */
+    /* Certificate Box Badge */
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 32px 0;
+    }
+    .cert-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .cert-disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
 
-      /* @media screen and (min-width: 500px){
-        .video-frame {
-          width: 490px;
-          height: 285px;
-        }
-      }  */
-		
-    </style>
-  </head>
-  <body>
-    <header>
-      Results may vary based on individual effort and practice
-    </header>
-	  
-    <div class="container">
-      <h1>
-        🚀 Learn Ukulele from <span style="color:#ffd166">Complete Basics </span>- No experience needed. <br><span style="color:#ffd166; text-decoration: underline;">Progress at your own pace.</span>
-      </h1>
-      <div class="center">
-        <!-- <iframe
-          src="https://player.vimeo.com/video/1139036438?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          class="video-frame"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          title="Ukulele Player"
-        ></iframe> -->
-		<!-- https://player.vimeo.com/video/1059972820?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479 -->
-        <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
+    /* Bio / Instructor Profiles */
+    .mentor-card {
+      background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.05), transparent), var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 28px 20px;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .mentor-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--accent-gold);
+      margin-bottom: 16px;
+    }
+    .mentor-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .mentor-title {
+      font-size: 13px;
+      color: var(--accent-gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .mentor-bio {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-align: left;
+      line-height: 1.6;
+    }
 
-		  <iframe
-          src="https://fast.wistia.net/embed/iframe/ql7yrs3epc?seo=true&videoFoam=true"
-          class="video-frame"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-          title="Ukulele Player"
-        ></iframe>
-		  <script src="https://fast.wistia.net/player.js" async></script>
+    /* FAQ Element Architecture */
+    .faq-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .faq-q {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Compliance/Legal Disclaimer markup */
+    .legal-notice {
+      font-size: 11px;
+      color: rgba(148, 163, 184, 0.5);
+      text-align: justify;
+      margin: 48px 0 24px 0;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+
+    /* Footer Meta Structure */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 32px 0;
+      text-align: center;
+    }
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      margin: 0 8px;
+      transition: color 0.2s ease;
+    }
+    footer a:hover {
+      color: var(--accent-gold);
+    }
+    .footer-copyright {
+      font-size: 12px;
+      color: rgba(148, 163, 184, 0.4);
+      margin-top: 16px;
+    }
+
+    /* Sticky Bottom Conversion Module Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      padding: 12px 20px cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+      box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+      padding: 15px;
+    }
+    .sticky-bar-wrapper {
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .sticky-pricing {
+      text-align: left;
+    }
+    .sticky-price-now {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+    .sticky-price-was {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+    .btn-sticky {
+      width: auto;
+      padding: 12px 28px;
+      font-size: 15px;
+      border-radius: 10px;
+    }
+
+    /* Media query adjustments for smaller phones */
+    @media (max-width: 400px) {
+      h1 { font-size: 24px; }
+      h2 { font-size: 19px; }
+      .matrix-table th, .matrix-table td { padding: 10px 6px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-ticker">
+    Results may vary based on individual effort and practice
+  </header>
+
+  <div class="container">
+    <div class="logo-container">
+      <img src="./images/ukulele/fallback.jpg" alt="The Guitar Dojo Logo" onerror="this.style.display='none'">
+    </div>
+
+    <h1>
+      🚀 Learn Ukulele from <span class="highlight">Complete Basics</span> - No experience needed. <span class="underline">Progress at your own pace.</span>
+    </h1>
+
+    <div class="video-container">
+      <iframe src="https://fast.wistia.net/embed/iframe/ql7yrs3epc?seo=true&videoFoam=true" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Ukulele Player"></iframe>
+      <script src="https://fast.wistia.net/player.js" async></script>
+    </div>
+
+    <div class="timer-card" id="offerTimer">
+      <div class="timer-label">
+        <i data-lucide="clock" style="width:14px; height:14px;"></i> Beginner Offer Ends In
       </div>
-
-		<!-- Timer -->
-       <style>
-        .offer-timer {
-            background: #fff3cd;
-            border: 1px solid #ffeeba;
-            padding: 15px;
-            text-align: center;
-            border-radius: 8px;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-            max-width: 300px;
-          }
-
-          .timer-text {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #856404;
-            font-weight: 600;
-          }
-
-          #countdown {
-            font-size: 26px;
-            font-weight: bold;
-            color: #d63333;
-          }
-
-       </style>
-       <div class="offer-timer" id="offerTimer">
-        <p class="timer-text">⏰ Beginner Offer Ends In</p>
-        <div id="countdown">
-          <span id="hours">00</span> :
-          <span id="minutes">00</span> :
-          <span id="seconds">00</span>
-        </div>
+      <div class="timer-display" id="countdown">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
       </div>
-      <script>
-        (function () {
-          const TIMER_KEY = "Ukulele_offer_end_time";
-          const HIDDEN_KEY = "Ukulele_offer_expired";
-          const DURATION = 24 * 60 * 60 * 1000; // 24 hours
+    </div>
 
-          const timerBox = document.getElementById("offerTimer");
+    <p class="sub-heading">
+      Step-By-Step Lessons! Start Now for Only ₹499 – Limited Time Offer!
+    </p>
 
-          // If already expired, hide immediately
-          if (localStorage.getItem(HIDDEN_KEY)) {
-            timerBox.style.display = "none";
-            return;
-          }
-
-          let endTime = localStorage.getItem(TIMER_KEY);
-
-          if (!endTime) {
-            endTime = Date.now() + DURATION;
-            localStorage.setItem(TIMER_KEY, endTime);
-          }
-
-          function updateTimer() {
-            const remaining = endTime - Date.now();
-
-            if (remaining <= 0) {
-              timerBox.style.display = "none"; // AUTO HIDE
-              localStorage.setItem(HIDDEN_KEY, "true");
-              localStorage.removeItem(TIMER_KEY);
-              return;
-            }
-
-            const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((remaining / (1000 * 60)) % 60);
-            const seconds = Math.floor((remaining / 1000) % 60);
-
-            document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
-          }
-
-          updateTimer();
-          setInterval(updateTimer, 1000);
-        })();
-        </script>
-      <!-- Timer Ends -->
-		
-		<!-- <br/>
-		<img src="./images/mentor-head.png" width="300px" alt="mentor"/>
-		<br/> -->
-		
-      <p class="sub-heading">
-        Step-By-Step Lessons! Start Now for Only ₹499 – Limited Time Offer!
-      </p>
-      <div class="rating-price-trust">
-        <p>⭐ Hundreds of learners have joined.</p>
-        <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view">
-          <button class="btn">Buy Now @ ₹499/- ₹<span class="strike"> 799</span></button>
-        </a>
+    <div style="text-align: center; margin-bottom: 40px;">
+      <div class="social-proof-text">
+        <i data-lucide="users" style="width:16px; height:16px;"></i> 1125+ of learners have joined
       </div>
-
-      <h2>
-        We have designed a <br />flexible program for<br />
-        you
-      </h2>
-      <div class="tip-box">
-        <img src="./images/clapperboard.png" alt="video" />
-        <p>
-          Recorded Course <br />No confusing theory, just simple,
-          actionable steps.
-        </p>
-      </div>
-      <div class="tip-box">
-        <img src="./images/musical-note.png" alt="music" />
-        <p>
-          Language is Simple English <br />Learn Basic chords, strumming, and
-          <br />fingerpicking in English language.
-        </p>
-      </div>
-      <div class="tip-box">
-        <img src="./images/progress-bar.png" alt="progress" />
-        <p>
-          Daily Practice Plan <br />Even 20 minutes a day can help you make 
-          <br />steady progress.
-        </p>
-      </div>
-      <div class="tip-box">
-        <img src="./images/user.png" alt="user" />
-        <p>
-          100% Beginner Friendly <br />Designed for complete beginners with
-          <br />zero experience.
-        </p>
-      </div>
-      <div class="tip-box">
-        <img src="./images/clock1.png" alt="clock" />
-        <p>
-          Lifetime Access <br />Learn at your own pace, anytime, <br />anywhere.
-        </p>
-      </div>
-
-      <br />
-      <h2>
-        What exactly will we <br />
-        learn (Syllabus)?
-      </h2>
-      <div class="tip-box">
-		<div class="gif_box">
-          <img loading="lazy" src="./images/ukulele/ukulele_gif_1.gif" class="animated_img" laz/>
-        </div>
-        <div class="flex">
-          <img src="./images/clapperboard.png" alt="clapper" />
-          <p>#1: Introduction to Ukulele & Basic Chords</p>
-        </div>
-        <div class="lesson">➤ Introduction to the Ukulele</div>
-        <div class="lesson">➤ Tuning & Setting Up The Ukulele</div>
-        <div class="lesson">➤ How to Tune Ukulele using Guitar Tuna?</div>
-        <div class="lesson">
-          ➤ How to Tune Ukulele and Metronome?
-        </div>
-        <div class="lesson">
-          ➤ Ukulele Music Basics 
-        </div>
-        <div class="lesson">➤ How to Read Chords Diagram?</div>
-        <div class="lesson">➤ How to Read Chords Diagram? (Detail)</div>
-        <div class="lesson">➤ Your First Chord: C Chord</div>
-        <div class="lesson">➤ Learn F Major and A Minor Chords</div>
-        <div class="lesson">➤ Learn Chords Transition between C-F-A</div>
-        <div class="lesson">➤ Learn Chord Transition (Advance)</div>
-        <div class="lesson">➤ How to Strum Properly using Fingers</div>
-        <div class="lesson">➤ More on Strumming</div>
-        <div class="lesson">➤ Row Row Row your Boat</div>
-        <div class="lesson">➤ Row Row Row your Boat (Slow & Simplified Version)</div>
-        <div class="lesson">➤ Twinkle Twinkle Little Star</div>
-        <div class="lesson">➤ Twinkle Twinkle Little Star Tabs (Simplified)</div>
-      </div>
-
-      <div class="tip-box">
-		<div class="gif_box">
-          <img loading="lazy" src="./images/ukulele/ukulele_gif_2.gif" class="animated_img" laz/>
-        </div>
-        <div class="flex">
-          <img src="./images/clapperboard.png" alt="clapper" />
-          <p>#2: Expanding Chords & Strumming Patterns</p>
-        </div>
-        <div class="lesson">➤ Learn G Major Chord</div>
-        <div class="lesson">
-          ➤ Rhythm Control
-        </div>
-        <div class="lesson">➤ Rhythm Control with Strumming</div>
-        <div class="lesson">➤ More on Strumming</div>
-        <div class="lesson">➤ You are my sunshine on Ukulele</div>
-        <div class="lesson">
-          ➤ You are My Sunshine on Ukulele (Easy)
-        </div>
-        <div class="lesson">
-          ➤ How to Read Ukulele Tabs?
-        </div>
-        <div class="lesson">➤ How to Read Tabs in Detail?</div>
-        <div class="lesson">➤ Happy Birthday Tabs</div>
-        <div class="lesson">➤ Tabs Learning Habit</div>
-        <div class="lesson">➤ Strumming: DDU UDU</div>
-        <div class="lesson">➤ Strumming: DDU UDU & DDU UDUDU</div>
-        <div class="lesson">➤ Song Suggestion & Chit Chat</div>
-      </div>
-
-      <div class="tip-box">
-		<div class="gif_box">
-          <img loading="lazy" src="./images/ukulele/ukulele_gif_3.gif" class="animated_img" laz/>
-        </div>
-        <div class="flex">
-          <img src="./images/clapperboard.png" alt="clapper" />
-          <p>#3: Building Finger Strength & Basic Song Techniques</p>
-        </div>
-        <div class="lesson">➤ Finger Exercises</div>
-        <div class="lesson">
-          ➤ Learn D Major & E Minor Chord
-        </div>
-        <div class="lesson">
-          ➤ Chord Switching Drills
-        </div>
-        <div class="lesson">➤ Muting in Ukulele</div>
-        <div class="lesson">➤ Motivation</div>
-        <div class="lesson">
-          ➤ Introduction to Melody
-        </div>
-        <div class="lesson">
-          ➤ Practice Melody
-        </div>
-        <div class="lesson">➤ Finger Plucking</div>
-        <div class="lesson">➤ Basic Chord Transition Practice</div>
-      </div>
-
-      <div class="tip-box">
-		<div class="gif_box">
-          <img loading="lazy" src="./images/ukulele/ukulele_gif_4.gif" class="animated_img" laz/>
-        </div>
-        <div class="flex">
-          <img src="./images/clapperboard.png" alt="clapper" />
-          <p>#4: Putting It All Together</p>
-        </div>
-        <div class="lesson">➤ Intro to Can't Help Falling in Love</div>
-        <div class="lesson">➤ Intro to Tempo</div>
-        <div class="lesson">➤ Tutorial of Can't Help Falling in Love</div>
-        <div class="lesson">
-          ➤ Finger Plucking Intro
-        </div>
-        <div class="lesson">
-          ➤ Finger Plucking Basics
-        </div>
-        <div class="lesson">➤ Common Mistake</div>
-        <div class="lesson">➤ Playing while singing</div>
-        <div class="lesson">
-          ➤ Revision Day
-        </div>
-        <div class="lesson">➤ Fingerstyle</div>
-        <div class="lesson">➤ Perfect by Ed Sheerean </div>
-        <div class="lesson">➤ 8 By Billie Eilish</div>
-        <div class="lesson">➤ Final Day</div>
-      </div>
-
-      <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view">
-        <button class="btn">Buy Now @ ₹499/- ₹<span class="strike"> 799</span></button>
+      <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn-primary">
+        Buy Now @ ₹499/- <span class="strike">₹799</span>
+        <i data-lucide="arrow-right" style="width:20px; height:20px;"></i>
       </a>
+    </div>
 
-		<!-- Comparison Table --->
-		<div class="container-comparison">
-
-			<h2 style="font-size:20px">Why Choose This Course?</h2>
-			
-			<table class="table">
-			<tr>
-			<th>Feature</th>
-			<th>Our Course</th>
-			<th>Other Courses</th>
-			</tr>
-			<tr>
-			<td>Beginner Friendly</td>
-			<td class="highlight">Step-by-step modules</td>
-			<td>Random lessons</td>
-			</tr>
-			<tr>
-			<td>Personal Support</td>
-			<td class="highlight">Private WhatsApp help</td>
-			<td>No direct help</td>
-			</tr>
-			<tr>
-			<td>Song Practice</td>
-			<td class="highlight">Play real songs fast</td>
-			<td>Mostly theory</td>
-			</tr>
-			<tr>
-			<td>Chord Transition Training</td>
-			<td class="highlight">Special exercises</td>
-			<td>Not focused</td>
-			</tr>
-			<tr>
-			<td>Lifetime Access</td>
-			<td class="highlight">Yes</td>
-			<td>Limited access</td>
-			</tr>
-			<tr>
-			<td>Mentor Guidance</td>
-			<td class="highlight">Motivation + guidance</td>
-			<td>Recorded videos only</td>
-			</tr>
-			</table>
-			
-			<div class="bonus">
-			<h3>🎁 Free Bonuses</h3>
-			<p>✔ Beginner Songbook PDF<br>
-			✔ Strumming Pattern Guide<br>
-			✔ Practice Routine Plan<br>
-			✔ Access to Private WhatsApp Community</p>
-			</div>
-			
-			
-			<div class="footer-text">
-			100% Beginner Friendly | Lifetime Access | Instant Start
-			</div>
-		</div>
-			<!-- Comparison Table End ---->
-
-      <div class="space">
-        <h2>What Our Students Say</h2>
-        <br />
-        <img src="./images/ukulele/testimonial-1.jpg" alt="Riya S. Testimonial" class="testimonial" />
-        <p style="color:#fff; font-size:14px;">Riya S. — "Never thought I could play songs this fast! The lessons are super beginner-friendly and easy to follow."</p><br/>
-        <img src="./images/ukulele/testimonial-2.jpg" alt="Aman K. Testimonial" class="testimonial" />
-        <p style="color:#fff; font-size:14px;">Aman K. — "I started with zero knowledge of ukulele, and within a few days I was already playing chords confidently."</p><br/>
-        <img src="./images/ukulele/testimonial-3.jpg" alt="Neha P. Testimonial" class="testimonial" />
-        <p style="color:#fff; font-size:14px;">Neha P. — "The teaching style is simple, clear, and motivating. Perfect course for complete beginners!"</p><br/>
-        <img src="./images/ukulele/testimonial-4.jpg" alt="Rahul M." class="testimonial" />
-        <p style="color:#fff; font-size:14px;">Rahul M. — "I loved how step-by-step everything was explained. This course made learning ukulele really fun."</p><br/>
+    <h2>We have designed a flexible program for you</h2>
+    
+    <div class="grid-features">
+      <div class="feature-card">
+        <div class="feature-icon-wrapper"><i data-lucide="clapperboard"></i></div>
+        <div>
+          <div class="feature-title">Recorded Course</div>
+          <div class="feature-desc">No confusing theory, just simple, actionable steps.</div>
+        </div>
       </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper"><i data-lucide="languages"></i></div>
+        <div>
+          <div class="feature-title">Language is Simple English</div>
+          <div class="feature-desc">Learn Basic chords, strumming, and fingerpicking in clear English language.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper"><i data-lucide="calendar-days"></i></div>
+        <div>
+          <div class="feature-title">Daily Practice Plan</div>
+          <div class="feature-desc">Even 20 minutes a day can help you make steady progress.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper"><i data-lucide="sparkles"></i></div>
+        <div>
+          <div class="feature-title">100% Beginner Friendly</div>
+          <div class="feature-desc">Explicitly crafted for absolute beginners with zero prior music experience.</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon-wrapper"><i data-lucide="infinity"></i></div>
+        <div>
+          <div class="feature-title">Lifetime Access</div>
+          <div class="feature-desc">Learn at your own pace, safely anytime, anywhere.</div>
+        </div>
+      </div>
+    </div>
 
+    <h2>What exactly will we learn?</h2>
+
+    <div class="module-card">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-header-left">
+          <span class="module-num-badge">#1</span>
+          <span class="module-title">Introduction & Basic Chords</span>
+        </div>
+        <i data-lucide="chevron-down" class="module-chevron" style="transform: rotate(180deg);"></i>
+      </div>
+      <div class="module-content open">
+        <div class="gif-container"><img src="./images/ukulele/ukulele_gif_1.gif" alt="Module 1"></div>
+        <div class="lessons-list">
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Introduction to the Ukulele</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Tuning & Setting Up The Ukulele</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Tune Ukulele using Guitar Tuna?</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Tune Ukulele and Metronome?</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Ukulele Music Basics</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Read Chords Diagram?</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Read Chords Diagram? (Detail)</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Your First Chord: C Chord</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Learn F Major and A Minor Chords</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Learn Chords Transition between C-F-A</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Learn Chord Transition (Advance)</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Strum Properly using Fingers</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> More on Strumming</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Row Row Row your Boat</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Row Row Row your Boat (Slow & Simplified)</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Twinkle Twinkle Little Star</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Twinkle Twinkle Little Star Tabs (Simplified)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-header-left">
+          <span class="module-num-badge">#2</span>
+          <span class="module-title">Expanding Chords & Strumming Patterns</span>
+        </div>
+        <i data-lucide="chevron-down" class="module-chevron"></i>
+      </div>
+      <div class="module-content">
+        <div class="gif-container"><img src="./images/ukulele/ukulele_gif_2.gif" alt="Module 2"></div>
+        <div class="lessons-list">
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Learn G Major Chord</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Rhythm Control</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Rhythm Control with Strumming</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> More on Strumming</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> You are my sunshine on Ukulele</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> You are My Sunshine on Ukulele (Easy)</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Read Ukulele Tabs?</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> How to Read Tabs in Detail?</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Happy Birthday Tabs</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Tabs Learning Habit</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Strumming: DDU UDU</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Strumming: DDU UDU & DDU UDUDU</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Song Suggestion & Chit Chat</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-header-left">
+          <span class="module-num-badge">#3</span>
+          <span class="module-title">Finger Strength & Song Techniques</span>
+        </div>
+        <i data-lucide="chevron-down" class="module-chevron"></i>
+      </div>
+      <div class="module-content">
+        <div class="gif-container"><img src="./images/ukulele/ukulele_gif_3.gif" alt="Module 3"></div>
+        <div class="lessons-list">
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Finger Exercises</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Learn D Major & E Minor Chord</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Chord Switching Drills</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Muting in Ukulele</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Motivation</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Introduction to Melody</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Practice Melody</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Finger Plucking</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Basic Chord Transition Practice</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header" onclick="toggleModule(this)">
+        <div class="module-header-left">
+          <span class="module-num-badge">#4</span>
+          <span class="module-title">Putting It All Together</span>
+        </div>
+        <i data-lucide="chevron-down" class="module-chevron"></i>
+      </div>
+      <div class="module-content">
+        <div class="gif-container"><img src="./images/ukulele/ukulele_gif_4.gif" alt="Module 4"></div>
+        <div class="lessons-list">
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Intro to Can't Help Falling in Love</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Intro to Tempo</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Tutorial of Can't Help Falling in Love</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Finger Plucking Intro</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Finger Plucking Basics</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Common Mistake</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Playing while singing</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Revision Day</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Fingerstyle</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Perfect by Ed Sheerean</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> 8 By Billie Eilish</div>
+          <div class="lesson-item"><i data-lucide="play-circle"></i> Final Day</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 32px 0 48px;">
+      <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn-primary">
+        Buy Now @ ₹499/- <span class="strike">₹799</span>
+        <i data-lucide="arrow-right" style="width:20px; height:20px;"></i>
+      </a>
+    </div>
+
+    <div class="matrix-card">
+      <h2>Why Choose This Course?</h2>
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Our Course</th>
+            <th>Others</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beginner Map</td>
+            <td class="highlighted-cell">Step-by-step</td>
+            <td>Random lessons</td>
+          </tr>
+          <tr>
+            <td>Direct Help</td>
+            <td class="highlighted-cell">Private WhatsApp</td>
+            <td>No direct help</td>
+          </tr>
+          <tr>
+            <td>Method</td>
+            <td class="highlighted-cell">Play real songs fast</td>
+            <td>Mostly theory</td>
+          </tr>
+          <tr>
+            <td>Transitions</td>
+            <td class="highlighted-cell">Special drills</td>
+            <td>Not focused</td>
+          </tr>
+          <tr>
+            <td>Access</td>
+            <td class="highlighted-cell">Lifetime</td>
+            <td>Limited access</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="bonus-box">
+        <div class="bonus-title">
+          <i data-lucide="gift"></i> Free Bonuses Included
+        </div>
+        <div class="bonus-item"><i data-lucide="check-circle-2"></i> Beginner Songbook PDF</div>
+        <div class="bonus-item"><i data-lucide="check-circle-2"></i> Strumming Pattern Guide</div>
+        <div class="bonus-item"><i data-lucide="check-circle-2"></i> Practice Routine Action Plan</div>
+        <div class="bonus-item"><i data-lucide="check-circle-2"></i> Access to Private WhatsApp Community</div>
+      </div>
+    </div>
+
+    <h2>What Our Students Say</h2>
+    <div class="testimonial-stack">
+      <div class="testimonial-card">
+        <img src="./images/ukulele/testimonial-1.jpg" alt="Riya S." class="testimonial-img">
+        <p class="testimonial-quote">"Never thought I could play songs this fast! The lessons are super beginner-friendly and easy to follow." — Riya S.</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/ukulele/testimonial-2.jpg" alt="Aman K." class="testimonial-img">
+        <p class="testimonial-quote">"I started with zero knowledge of ukulele, and within a few days I was already playing chords confidently." — Aman K.</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/ukulele/testimonial-3.jpg" alt="Neha P." class="testimonial-img">
+        <p class="testimonial-quote">"The teaching style is simple, clear, and motivating. Perfect course for complete beginners!" — Neha P.</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="./images/ukulele/testimonial-4.jpg" alt="Rahul M." class="testimonial-img">
+        <p class="testimonial-quote">"I loved how step-by-step everything was explained. This course made learning ukulele really fun." — Rahul M.</p>
+      </div>
+    </div>
+
+    <div class="cert-card">
       <h2>Certificate of Completion!</h2>
-      <br />
-      <img
-        src="./images/certificate.webp"
-        alt="certificate"
-        class="testimonial"
-      />
-      <p style="color: #b5b5b5;">Note: This is a course completion certificate, not an official music qualification.</p>
-
-      <div class="mentor">
-        	<img src="./images/ukulele/profile-sudar.jpg" alt="mentor" class="mentor-img">
-        	<div class="mentor-name">🎸 Meet Your Mentor — Sudarshana</div>
-	        <div class="mentor-bio">
-	          Sudarshana a passionate musician with 8+ years of playing and teaching experience who has helped beginners start their musical journey with confidence. His simple and practical teaching style makes learning easy, fun, and stress-free. From basic chords to playing full songs, he focuses on helping students learn step-by-step without complicated music theory.
-	        </div>
-      </div>
-
-      <div class="space">
-        <h2>Frequently Asked Questions</h2>
-        <br />
-        <div class="tip-box">
-          <p class="question">
-            1. I have never played Ukulele before. Can I really learn in 30 days?
-          </p>
-          <p class="answer">
-            Yes! Most beginners start playing their first songs within about 30 days of regular practice. Everyone learns differently.
-          </p>
-        </div>
-        <div class="tip-box">
-          <p class="question">2. Do I need an expensive Ukulele to start?</p>
-          <p class="answer">
-            No! You can start with any basic acoustic or electric Ukulele. We
-            also provide recommendations for budget-friendly options.
-          </p>
-        </div>
-        <div class="tip-box">
-          <p class="question">3. How much time do I need to practice daily?</p>
-          <p class="answer">
-            Even 20 minutes a day can help you make steady progress. The course is
-            designed to fit into your busy schedule.
-          </p>
-        </div>
-        <div class="tip-box">
-          <p class="question">4. What if I don’t like the course?</p>
-          <p class="answer">
-            No worries! If you face any issues, our support team will be there to help you throughout your learning journey.
-          </p>
-        </div>
-        <div class="tip-box">
-          <p class="question">5. How to contact us?</p>
-          <p class="answer">
-            You can contact us via our email/phone - support@flipstuck.com /
-            +917031139797
-          </p>
-        </div>
-      </div>
-
-      <p class="fads">
-            This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you &amp; me) to a high standard of integrity
-            <br><br>
-            This website is not affiliated with Google LLC or any of its products or services. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
-      </p>
-
-      <footer>
-        <h2 class="elementor-heading-title elementor-size-default">
-          <a href="./terms-conditions">Terms &amp; Conditions</a> |
-          <a href="./privacy-policy">Privacy Policy</a> |
-          <a href="./disclaimer">Disclaimer</a> |
-          <a href="./contact-us">Contact Us</a>
-          <br />
-          2024-2026 © Guitar Dojo
-        </h2>
-      </footer>
+      <img src="./images/certificate.webp" alt="Course Certificate" class="cert-img">
+      <p class="cert-disclaimer">Note: This is a course completion certificate, not an official music qualification.</p>
     </div>
 
-	<!-- <style>
-      .navbar-btn {
-        animation: tilt-shaking 0.6s infinite;
-      }
-
-      @keyframes tilt-shaking {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(1deg); }
-        50% { transform: rotate(0deg); }
-        75% { transform: rotate(-1deg); }
-        100% { transform: rotate(0deg); }
-      }
-    </style> -->
-	  
-    <div class="banner">
-      <div>
-        <span style="color: #fff; font-weight: 700">₹499/-</span><br />
-        <span style="color: #9b9b9b;">₹ <span class="strike"> 799</span></span>
+    <div class="mentor-card">
+      <img src="./images/ukulele/profile-sudar.jpg" alt="Mentor Sudarshana" class="mentor-avatar">
+      <div class="mentor-name">Meet Your Mentor — Sudarshana</div>
+      <div class="mentor-title">8+ Years Experience</div>
+      <div class="mentor-bio">
+        Sudarshana is a passionate musician with 8+ years of playing and teaching experience who has helped beginners start their musical journey with confidence. His simple and practical teaching style makes learning easy, fun, and stress-free. From basic chords to playing full songs, he focuses on helping students learn step-by-step without complicated music theory.
       </div>
-      <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn navbar-btn"
-        >Buy Now</a
-      >
     </div>
 
-	  <!-- Recent Purchase PopUp Notification -->
-    <!-- <style>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-stack" style="margin-bottom: 40px;">
+      <div class="faq-item">
+        <div class="faq-q">1. I have never played Ukulele before. Can I really learn in 30 days?</div>
+        <div class="faq-a">Yes! Most beginners start playing their first songs within about 30 days of regular practice. Everyone learns differently.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">2. Do I need an expensive Ukulele to start?</div>
+        <div class="faq-a">No! You can start with any basic acoustic or electric Ukulele. We also provide recommendations for budget-friendly options.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">3. How much time do I need to practice daily?</div>
+        <div class="faq-a">Even 20 minutes a day can help you make steady progress. The course is designed to fit into your busy schedule.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">4. What if I don’t like the course?</div>
+        <div class="faq-a">No worries! If you face any issues, our support team will be there to help you throughout your learning journey.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">5. How to contact us?</div>
+        <div class="faq-a">You can contact us via our email/phone - support@flipstuck.com / +917031139797</div>
+      </div>
+    </div>
 
-      #purchase-widget {
-        position: fixed;
-        bottom: 100px;
-        left: 10px;
-        background: #ffffff;
-        color: #000;
-        padding: 14px 16px 12px;
-        border-radius: 8px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        font-size: 14px;
-        display: none;
-        z-index: 9999;
-        max-width: 280px;
-        animation: fadeIn 0.4s ease;
+    <p class="legal-notice">
+      This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you &amp; me) to a high standard of integrity.<br><br>
+      This website is not affiliated with Google LLC or any of its products or services. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+    </p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <a href="./terms-conditions">Terms &amp; Conditions</a>
+      <a href="./privacy-policy">Privacy Policy</a>
+      <a href="./disclaimer">Disclaimer</a>
+      <a href="./contact-us">Contact Us</a>
+      <div class="footer-copyright">2024-2026 © Guitar Dojo</div>
+    </div>
+  </footer>
+
+
+  <div class="sticky-bar">
+    <div class="sticky-bar-wrapper">
+      <div class="sticky-pricing">
+        <div class="sticky-price-now">₹499/-</div>
+        <div class="sticky-price-was">₹799</div>
+      </div>
+      <a href="https://pages.razorpay.com/pl_SWzTTmZ6ImpPFZ/view" class="btn-primary btn-sticky">
+        Join Now <i data-lucide="arrow-right" style="width:16px; height:16px;"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Accordion Toggle Engine
+    function toggleModule(header) {
+      const content = header.nextElementSibling;
+      const chevron = header.querySelector('.module-chevron');
+      
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.add('open');
+        chevron.style.transform = 'rotate(180deg)';
       }
+    }
 
-      #purchase-text {
-        line-height: 1.4;
-      }
+    // Modern 15-Minute Countdown Loop (Simulating Urgency)
+    function startTimer(duration, display) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-      #close-widget {
-        position: absolute;
-        top: 6px;
-        right: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        color: #999;
-      }
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      #close-widget:hover {
-        color: #000;
-      }
+        document.getElementById('hours').textContent = hours;
+        document.getElementById('minutes').textContent = minutes;
+        document.getElementById('seconds').textContent = seconds;
 
-      .purchase-note {
-        display: block;
-        margin-top: 4px;
-        font-size: 11px;
-        color: #777;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
+        if (--timer < 0) {
+          timer = duration; // Reset loop
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
+      }, 1000);
+    }
 
-    <div id="purchase-widget">
-      <span id="close-widget">×</span>
-      <div id="purchase-text"></div>
-      <small class="purchase-note">Recent activity</small>
-    </div>
-
-    <script>
-      const locations = ["Delhi", "Mumbai", "Bangalore", "Kolkata", "Pune", "Chennai", "Hyderabad", "Surat", "Jaipur", "Lucknow", "Nagpur"];
-
-      const widget = document.getElementById("purchase-widget");
-      const text = document.getElementById("purchase-text");
-      const closeBtn = document.getElementById("close-widget");
-
-      let isClosed = false;
-
-      function showPurchase() {
-        if (isClosed) return;
-
-        const location = locations[Math.floor(Math.random() * locations.length)];
-
-        text.innerHTML = `
-          Someone recently purchased this course from <strong>${location}</strong>
-        `;
-
-        widget.style.display = "block";
-
-        setTimeout(() => {
-          widget.style.display = "none";
-        }, 4000);
-      }
-
-      // Close button
-      closeBtn.addEventListener("click", () => {
-        widget.style.display = "none";
-        isClosed = true;
-      });
-
-      // Timing
-      setInterval(showPurchase, 5000);
-      setTimeout(showPurchase, 3000);
-  </script> -->
-
-  <!-- END - Recent Purchase PopUp Notification -->
-	  
-  </body>
+    window.onload = function () {
+      let fifteenMinutes = 60 * 15;
+      startTimer(fifteenMinutes);
+    };
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
