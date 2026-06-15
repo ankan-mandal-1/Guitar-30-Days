@@ -4,260 +4,291 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Guitar in 30 Days - The Guitar Dojo</title>
-	<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1434653941036779');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1434653941036779&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1434653941036779');fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1434653941036779&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
 
-	<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-370763129"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-370763129'); </script>
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-370763129"></script> 
+    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-370763129'); </script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary-blue: #00a4ff;
+            --primary-blue-dark: #008be0;
+            --brand-green: #01b55e;
+            --brand-green-light: #e5faf1;
+            --whatsapp-color: #25d366;
+            --drive-color: #fbbc05;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        html {
-            font-family: "Poppins", serif;
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
+
         header {
-            background-color: #00a4ff;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
             color: #fff;
             text-align: center;
-            font-weight: 600;
-            padding: 10px 0;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 12px 20px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0, 164, 255, 0.15);
         }
+
         .container {
-            max-width: 500px;
+            max-width: 550px;
             margin: auto;
-			padding: 10px;
+            padding: 24px 20px;
         }
-        h1{
+
+        .welcome-title {
             text-align: center;
-            line-height: 1.2;
-            padding: 30px 8px;
-        }
-        h2{
-            text-align: center;
-            font-size: 18px;
-        }
-        .rating {
-            border: 4px dotted #01b55e;
-            border-radius: 20px;
-            background: #e5faf1;
-            color: #01b55e;
-            font-weight: 600;
-            text-align: center;
-            max-width: 319px;
-            padding: 10px 0;
-            font-size: 14px;
-            margin: auto;
+            font-size: 28px;
+            font-weight: 800;
             margin-top: 20px;
-            margin-bottom: 20px;
+            letter-spacing: -0.5px;
         }
-        .center{
+        .welcome-title span {
+            color: var(--brand-green);
+        }
+
+        .welcome-subtitle {
             text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        /* Timeline / Steps UI System */
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 28px 24px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+            position: relative;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: var(--brand-green-light);
+            color: var(--brand-green);
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(1, 181, 94, 0.15);
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-dark);
+        }
+
+        /* Video Framing */
+        .video-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 4px solid var(--primary-blue);
+            box-shadow: 0 12px 30px rgba(0, 164, 255, 0.15);
+            background: #000;
+            margin: 15px auto 25px auto;
+            max-width: 330px;
         }
         .video-frame {
-            max-width: 320px;
-            height: 548px;
-            text-align: center;
-            margin: auto;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 8px solid #00a4ff;
+            width: 100%;
+            height: 520px;
+            display: block;
         }
-        .short-text{
-            text-align: center;
-            font-weight: 600;
-            padding: 20px;
+
+        /* Information / Credentials Deck */
+        .credential-box {
+            background: #f1f5f9;
+            border-left: 4px solid var(--primary-blue);
+            padding: 16px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            font-size: 14px;
+            text-align: left;
         }
-        .course-details{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            text-align: center;
-            border: 4px solid #01b55e;
-            border-radius: 10px;
-            margin: 0 20px 20px 20px;
+        .credential-box p {
+            margin-bottom: 4px;
         }
-        .course-details > div {
-            border: 1px dotted #01b55e;
-            padding: 12px;
+        .credential-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Reusable Dynamic Action Buttons */
+        .action-btn {
             display: flex;
-            justify-content: center;
             align-items: center;
-        }
-        .emoji {
-            font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-        }
-        .buy-btn{
-            text-align: center;
-            margin: 50px 0;
-        }
-        .btn{
-            background: #FEC501;
-    padding: 20px 28px;
-    font-weight: 700;
-    font-size: 20px;
-    text-decoration: none;
-    color: black;
-    border-radius: 10px;
-        }
-        .strike {
-            text-decoration: line-through;
-        }
-        .small-heading{
-            font-size: 28px;
-        }
-        .syllabus-box{
-            border: 5px solid #01b55e;
-    border-radius: 20px;
-    max-width: 320px;
-    padding: 30px;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: #e5f9f0;
-        }
-        .syllabus-heading{
-            font-size: 22px;
-    font-weight: 700;
-    padding: 10px 0;
-        }
-        li::marker {
-            color: #01b55e;
-        }
-        .reviews {
-            text-align: center;
-        }
-        .review-image{
-            width: 90%;
-    border-radius: 10px;
-    margin: 5px 8px;
-    text-align: center;
-        }
-        .certificate {
-            text-align: center;
-            margin: 10px 0 0 0;
-        }
-        .certificate img {
-            width: 90%;
-    margin: auto;
-    border-radius: 10px;
-        }
-        .faq{
-            margin: 25px 0;
-            padding: 15px;
-
-        }
-        .question{
+            justify-content: center;
+            gap: 10px;
+            color: #fff;
             font-weight: 700;
-            margin: 35px 0 10px 0;
-        }
-        .fads {
-            padding: 12px;
-    font-size: 12px;
-    color: gray;
-        }
-        footer{
-            max-width: 950px;
-            margin: auto;
+            font-size: 15px;
+            text-decoration: none;
+            padding: 15px 24px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            margin-top: 15px;
             text-align: center;
-            padding: 6px;
-            margin-bottom: 100px;
         }
-	footer a{text-decoration: none;}
-    .banner{
-        background: #ffffff;
-    margin: 0;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
-    gap:50px;
-    box-shadow: 1px 1px 14px 5px rgb(0 0 0 / 15%);
-    }
+        .action-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-blue {
+            background: var(--primary-blue);
+            box-shadow: 0 6px 20px rgba(0, 164, 255, 0.25);
+        }
+        .btn-blue:hover { background: var(--primary-blue-dark); }
+
+        .btn-amber {
+            background: #f59e0b;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+        }
+        .btn-amber:hover { background: #d97706; }
+
+        .btn-green {
+            background: var(--whatsapp-color);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+            font-size: 16px;
+            padding: 16px 28px;
+        }
+        .btn-green:hover { background: #20ba5a; }
+
+        .fads {
+            padding: 20px 10px;
+            font-size: 11px;
+            color: var(--text-muted);
+            text-align: justify;
+            line-height: 1.6;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0 40px 0;
+        }
+        footer a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 13px;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+        footer a:hover {
+            color: var(--primary-blue);
+        }
+        .footer-copyright {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 12px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
+
     <header>
         INDIA’S MOST COMPREHENSIVE GUITAR COURSE
     </header>
+
     <div class="container">
-    <h1>
-        🚀 <span style="color:#01B55E">Thank You</span> for Enrolling in the Course <br/>
-    </h1>
-    <h2>Follow these Steps</h2>
-	<!-- <h4><span style="color: red;">You will receive the course access link in your email within the next 6 hours. You can access the course directly from there.</span></h4> -->
-    <div class="rating">
-        Step 1:-
-    </div>
-    <div class="center">
-        <iframe src="https://player.vimeo.com/video/1093498676?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"  title="Guitar Player"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
-    </div>
-	<br/>
-	<h2 style="text-align: left;">If you don't want to create an account, you can login using this demo account:</h2>
-	    <p>Username: mail2ankan0@gmail.com</p>
-	    <p>Password: guitar123</p>
-        <br/>
-        <h2 style="text-align: left;">Or Access the course directly without Login and Please save the link:</h2>
-        <p>Link: <a href="https://bit.ly/guitardojo1" target="_blank">https://bit.ly/guitardojo1</a></p>
+        <h1 class="welcome-title">
+            🚀 <span>Thank You</span> for Enrolling!
+        </h1>
+        <p class="welcome-subtitle">Follow these quick steps to get immediate course access:</p>
 
-    <div class="rating">
-        Step 2:-
-    </div>
-    <div class="short-text">
-        Download PDF Notes
-    </div>
-    <h2><a href="https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link" target="_blank">Download PDF Notes</a></h2>  
+        <!-- STEP 1 CARD -->
+        <div class="step-card">
+            <span class="step-badge">Step 1</span>
+            <h3 class="step-title">Watch Setup Guide & Access Stream</h3>
+            
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/1093498676?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Guitar Player"></iframe>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
 
-    <div class="rating">
-        Step 3:-
-    </div>
-    <div class="short-text">
-        Join our WhatsApp Community for future Updates
-    </div>
-    <h2>WhatsApp Group Link: <br/><a href="https://chat.whatsapp.com/HdYtttXvMO2Bwp5GbHtlyE" target="_blank">Join WhatsApp Group</a></h2>  
+            <div class="credential-box">
+                <p style="font-weight: 700; color: var(--text-dark); margin-bottom: 8px; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">💡 Instant Demo Login Details:</p>
+                <p><strong>Username:</strong> mail2ankan0@gmail.com</p>
+                <p><strong>Password:</strong> guitar123</p>
+            </div>
+
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 20px; text-align: left;">Alternatively, bypass direct account setups entirely and access the player matrix instantly (be sure to bookmark this link):</p>
+            <a href="https://bit.ly/guitardojo1" target="_blank" class="action-btn btn-blue">Direct Course Stream Link</a>
+        </div>
+
+        <!-- STEP 2 CARD -->
+        <div class="step-card">
+            <span class="step-badge">Step 2</span>
+            <h3 class="step-title">Download Program PDF Notes</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 5px; text-align: left;">
+                Grab your supplementary training logs, chord guides, and program documentation resources.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link" target="_blank" class="action-btn btn-amber">📁 Download PDF Notes</a>
+        </div>
+
+        <!-- STEP 3 CARD -->
+        <div class="step-card">
+            <span class="step-badge">Step 3</span>
+            <h3 class="step-title">Join the Private WhatsApp Community</h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 5px; text-align: left;">
+                Get community answers, upcoming content notifications, jam resources, and vital strategy sheets directly inside our chat hub.
+            </p>
+            <a href="https://chat.whatsapp.com/HdYtttXvMO2Bwp5GbHtlyE" target="_blank" class="action-btn btn-green">Join Live WhatsApp Group</a>
+        </div>                  
         
-        
-
-        <div style="margin-bottom: 200px;"></div>
         <p class="fads">
-            This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you & me) to a high standard of integrity
+            This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you & me) to a high standard of integrity.
         </p>
 
         <footer>
-            <h2 class="elementor-heading-title elementor-size-default"><a href='https://learn.flipstuck.com/terms-conditions'>Terms &amp; Conditions</a> | 
-                <a href='https://learn.flipstuck.com/privacy-policy'>Privacy Policy</a> |
-                <a href='https://learn.flipstuck.com/disclaimer'>Disclaimer</a> |
-            <a href='https://learn.flipstuck.com/contact-us'>Contact Us</a>
-                <br>
-                2024-2025 © Flipstuck Marketing 
-                </h2>
+            <div>
+                <a href='https://learn.flipstuck.com/terms-conditions'>Terms &amp; Conditions</a> | 
+                <a href='https://learn.flipstuck.com/privacy-policy'>Privacy Policy</a> | 
+                <a href='https://learn.flipstuck.com/disclaimer'>Disclaimer</a> | 
+                <a href='https://learn.flipstuck.com/contact-us'>Contact Us</a>
+            </div>
+            <div class="footer-copyright">
+                2024-2026 © Flipstuck Marketing
+            </div>
         </footer>
-
     </div>
+
 </body>
 </html>
