@@ -20,17 +20,18 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
         
         :root {
-            --primary-blue: #00a4ff;
-            --primary-blue-dark: #008be0;
-            --brand-green: #01b55e;
-            --brand-green-light: #e5faf1;
-            --whatsapp-color: #25d366;
-            --drive-color: #fbbc05;
-            --bg-main: #f8fafc;
-            --bg-card: #ffffff;
-            --text-dark: #0f172a;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
+            --neon-blue: #00f0ff;
+            --neon-blue-glow: rgba(0, 240, 255, 0.3);
+            --neon-blue-dark: #00a8b5;
+            --accent-green: #39ff14;
+            --whatsapp-bg: #25d366;
+            --pdf-red: #ef4444; /* Updated color variable for PDF */
+            --pdf-red-dark: #dc2626;
+            --bg-dark: #0b0f19;
+            --bg-card: #141b2d;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-glow: rgba(255, 255, 255, 0.07);
         }
 
         * {
@@ -41,89 +42,106 @@
 
         body {
             font-family: "Poppins", sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
-            color: #fff;
+            background: linear-gradient(90deg, #1e293b 0%, #0f172a 50%, #1e293b 100%);
+            color: var(--neon-blue);
             text-align: center;
             font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 1px;
-            padding: 12px 20px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            padding: 14px 20px;
             text-transform: uppercase;
-            box-shadow: 0 4px 12px rgba(0, 164, 255, 0.15);
+            border-bottom: 1px solid var(--border-glow);
         }
 
         .container {
             max-width: 550px;
             margin: auto;
-            padding: 24px 20px;
+            padding: 30px 20px;
         }
 
         .welcome-title {
             text-align: center;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 800;
-            margin-top: 20px;
+            margin-top: 15px;
             letter-spacing: -0.5px;
+            color: var(--text-light);
         }
         .welcome-title span {
-            color: var(--brand-green);
+            color: transparent;
+            background: linear-gradient(135deg, #00f0ff 0%, #39ff14 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         .welcome-subtitle {
             text-align: center;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             color: var(--text-muted);
             margin-bottom: 40px;
         }
 
-        /* Timeline / Steps UI System */
+        /* Glassmorphic Timeline Steps Card System */
         .step-card {
             background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 28px 24px;
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 30px 24px;
             margin-bottom: 35px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon-blue), transparent);
         }
 
         .step-badge {
             display: inline-block;
-            background: var(--brand-green-light);
-            color: var(--brand-green);
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--neon-blue);
             font-weight: 700;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 6px 14px;
+            letter-spacing: 1px;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 16px;
-            border: 1px solid rgba(1, 181, 94, 0.15);
+            margin-bottom: 18px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
         }
 
         .step-title {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             margin-bottom: 16px;
-            color: var(--text-dark);
+            color: var(--text-light);
+            letter-spacing: -0.3px;
         }
 
-        /* Video Framing */
+        /* Premium Video Interface */
         .video-container {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            border: 4px solid var(--primary-blue);
-            box-shadow: 0 12px 30px rgba(0, 164, 255, 0.15);
+            border: 2px solid rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 25px var(--neon-blue-glow);
             background: #000;
-            margin: 15px auto 25px auto;
+            margin: 20px auto 25px auto;
             max-width: 330px;
         }
         .video-frame {
@@ -132,24 +150,28 @@
             display: block;
         }
 
-        /* Information / Credentials Deck */
+        /* Secure Credentials Component Layout */
         .credential-box {
-            background: #f1f5f9;
-            border-left: 4px solid var(--primary-blue);
-            padding: 16px;
-            border-radius: 0 12px 12px 0;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 18px;
+            border-radius: 14px;
             margin: 20px 0;
             font-size: 14px;
             text-align: left;
         }
         .credential-box p {
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+        .credential-box p strong {
+            color: var(--text-light);
         }
         .credential-box p:last-child {
             margin-bottom: 0;
         }
 
-        /* Reusable Dynamic Action Buttons */
+        /* Call To Action Custom Matrix Elements */
         .action-btn {
             display: flex;
             align-items: center;
@@ -159,43 +181,45 @@
             font-weight: 700;
             font-size: 15px;
             text-decoration: none;
-            padding: 15px 24px;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-            margin-top: 15px;
+            padding: 16px 24px;
+            border-radius: 14px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 20px;
             text-align: center;
         }
         .action-btn:hover {
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            filter: brightness(1.1);
         }
 
-        .btn-blue {
-            background: var(--primary-blue);
-            box-shadow: 0 6px 20px rgba(0, 164, 255, 0.25);
+        .btn-neon-blue {
+            background: var(--neon-blue);
+            color: #0b0f19;
+            box-shadow: 0 8px 24px rgba(0, 240, 255, 0.25);
         }
-        .btn-blue:hover { background: var(--primary-blue-dark); }
 
-        .btn-amber {
-            background: #f59e0b;
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+        .btn-red {
+            background: var(--pdf-red);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(239, 68, 68, 0.25);
         }
-        .btn-amber:hover { background: #d97706; }
+        .btn-red:hover { background: var(--pdf-red-dark); }
 
         .btn-green {
-            background: var(--whatsapp-color);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+            background: var(--whatsapp-bg);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
             font-size: 16px;
-            padding: 16px 28px;
+            padding: 18px 28px;
         }
-        .btn-green:hover { background: #20ba5a; }
 
         .fads {
-            padding: 20px 10px;
+            padding: 25px 10px;
             font-size: 11px;
-            color: var(--text-muted);
+            color: #475569;
             text-align: justify;
-            line-height: 1.6;
-            border-top: 1px solid var(--border-color);
+            line-height: 1.7;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             margin-top: 60px;
         }
 
@@ -211,12 +235,12 @@
             font-weight: 500;
         }
         footer a:hover {
-            color: var(--primary-blue);
+            color: var(--neon-blue);
         }
         .footer-copyright {
             font-size: 12px;
-            color: #94a3b8;
-            margin-top: 12px;
+            color: #475569;
+            margin-top: 14px;
             font-weight: 500;
         }
     </style>
@@ -231,46 +255,46 @@
         <h1 class="welcome-title">
             🚀 <span>Thank You</span> for Enrolling!
         </h1>
-        <p class="welcome-subtitle">Follow these quick steps to get immediate course access:</p>
+        <p class="welcome-subtitle">Complete these 3 vital steps to begin tuning your guitar skills:</p>
 
         <!-- STEP 1 CARD -->
         <div class="step-card">
             <span class="step-badge">Step 1</span>
-            <h3 class="step-title">Watch Setup Guide & Access Stream</h3>
+            <h3 class="step-title">Watch Onboarding Guide & Stream Lessons</h3>
             
             <div class="video-container">
-                <iframe src="https://player.vimeo.com/video/1093498676?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Guitar Player"></iframe>
+                <iframe src="https://player.vimeo.com/video/1201513030?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;" class="video-frame" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="Guitar Player"></iframe>
                 <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
 
             <div class="credential-box">
-                <p style="font-weight: 700; color: var(--text-dark); margin-bottom: 8px; font-size:13px; text-transform:uppercase; letter-spacing:0.5px;">💡 Instant Demo Login Details:</p>
+                <p style="font-weight: 700; color: var(--neon-blue); margin-bottom: 8px; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">💡 Direct Demo Account Credentials:</p>
                 <p><strong>Username:</strong> mail2ankan0@gmail.com</p>
                 <p><strong>Password:</strong> guitar123</p>
             </div>
 
-            <p style="font-size: 13px; color: var(--text-muted); margin-top: 20px; text-align: left;">Alternatively, bypass direct account setups entirely and access the player matrix instantly (be sure to bookmark this link):</p>
-            <a href="https://bit.ly/guitardojo1" target="_blank" class="action-btn btn-blue">Direct Course Stream Link</a>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 20px; text-align: left;">If you don't wish to generate your own user account, click below to launch the streaming player directly (remember to save this link):</p>
+            <a href="https://guitardojo.in/course/" target="_blank" class="action-btn btn-neon-blue">⚡ Launch Direct Stream Link</a>
         </div>
 
         <!-- STEP 2 CARD -->
         <div class="step-card">
             <span class="step-badge">Step 2</span>
-            <h3 class="step-title">Download Program PDF Notes</h3>
-            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 5px; text-align: left;">
-                Grab your supplementary training logs, chord guides, and program documentation resources.
+            <h3 class="step-title">Download Learning Vault & PDF Notes</h3>
+            <p style="font-size: 14px; color: var(--text-muted); text-align: left;">
+                Get immediate offline access to all structural practice blueprints, progress worksheets, and chord visual guides.
             </p>
-            <a href="https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link" target="_blank" class="action-btn btn-amber">📁 Download PDF Notes</a>
+            <a href="https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link" target="_blank" class="action-btn btn-red">📁 Download PDF Resource Folder</a>
         </div>
 
         <!-- STEP 3 CARD -->
         <div class="step-card">
             <span class="step-badge">Step 3</span>
-            <h3 class="step-title">Join the Private WhatsApp Community</h3>
-            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 5px; text-align: left;">
-                Get community answers, upcoming content notifications, jam resources, and vital strategy sheets directly inside our chat hub.
+            <h3 class="step-title">Join the Closed WhatsApp Dojo Community</h3>
+            <p style="font-size: 14px; color: var(--text-muted); text-align: left;">
+                Connect to our main student notification server for upcoming course drop updates, jam loops, and peer strategy calls.
             </p>
-            <a href="https://chat.whatsapp.com/HdYtttXvMO2Bwp5GbHtlyE" target="_blank" class="action-btn btn-green">Join Live WhatsApp Group</a>
+            <a href="https://chat.whatsapp.com/HdYtttXvMO2Bwp5GbHtlyE" target="_blank" class="action-btn btn-green">💬 Join Exclusive WhatsApp Group</a>
         </div>                  
         
         <p class="fads">
