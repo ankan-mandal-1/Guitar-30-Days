@@ -1,11 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Guitar Dojo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6f8ff" />
+  <title>Guitar PDF Notes Access | Guitar Dojo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f9ff;
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #172033;
+      --muted: #687089;
+      --primary: #5b5ce2;
+      --primary-dark: #4748c9;
+      --accent: #8b5cf6;
+      --success: #22a06b;
+      --border: #e5e9f5;
+      --shadow: 0 24px 70px rgba(75, 84, 140, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(91, 92, 226, 0.14), transparent 30%),
+        radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.14), transparent 28%),
+        var(--bg);
+      display: grid;
+      place-items: center;
+      padding: 28px 16px;
+      overflow-x: hidden;
+    }
+
+    .page-shell {
+      width: 100%;
+      max-width: 960px;
+      position: relative;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(2px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .blob.one {
+      width: 170px;
+      height: 170px;
+      top: -60px;
+      left: -45px;
+      background: linear-gradient(135deg, rgba(91, 92, 226, 0.2), rgba(139, 92, 246, 0.08));
+    }
+
+    .blob.two {
+      width: 140px;
+      height: 140px;
+      right: -30px;
+      bottom: -40px;
+      background: linear-gradient(135deg, rgba(34, 160, 107, 0.12), rgba(91, 92, 226, 0.12));
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .top-bar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), #5b8cff);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 560px;
+    }
+
+    .main {
+      padding: 58px 56px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 10px 24px rgba(91, 92, 226, 0.28);
+      font-size: 20px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      align-self: flex-start;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: #ecf9f3;
+      color: var(--success);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--success);
+      box-shadow: 0 0 0 5px rgba(34, 160, 107, 0.12);
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+      margin-bottom: 18px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      appearance: none;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 14px 28px rgba(91, 92, 226, 0.28);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 18px 34px rgba(91, 92, 226, 0.34);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .note {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 15px 16px;
+      border: 1px solid #e8ebf5;
+      background: #fafbff;
+      border-radius: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .note-icon {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: #eef0ff;
+      color: var(--primary);
+      font-weight: 800;
+    }
+
+    .side {
+      padding: 34px;
+      background: linear-gradient(165deg, #f5f3ff 0%, #edf4ff 55%, #f8fbff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .side::before,
+    .side::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(91, 92, 226, 0.12);
+    }
+
+    .side::before {
+      width: 360px;
+      height: 360px;
+      top: -130px;
+      right: -140px;
+    }
+
+    .side::after {
+      width: 250px;
+      height: 250px;
+      bottom: -100px;
+      left: -100px;
+    }
+
+    .preview-card {
+      width: min(100%, 330px);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.95);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 25px 55px rgba(71, 72, 201, 0.16);
+      transform: rotate(2deg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .preview-cover {
+      aspect-ratio: 4 / 3;
+      border-radius: 20px;
+      background: linear-gradient(145deg, #5b5ce2, #8b5cf6 58%, #5b8cff);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      margin-bottom: 22px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
+    }
+
+    .guitar-icon {
+      font-size: 62px;
+      line-height: 1;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 8px 12px rgba(0,0,0,0.15));
+    }
+
+    .preview-cover strong {
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .preview-cover span {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: 0.82;
+    }
+
+    .preview-list {
+      display: grid;
+      gap: 13px;
+    }
+
+    .preview-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #50586f;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: #ecf9f3;
+      color: var(--success);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .footer {
+      text-align: center;
+      color: #8a91a6;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translate(-50%, 20px);
+      background: #172033;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 28px rgba(23, 32, 51, 0.25);
+      z-index: 20;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    @media (max-width: 820px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .main {
+        padding: 42px 28px 32px;
+      }
+
+      .side {
+        padding: 34px 24px 42px;
+      }
+
+      .preview-card {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 14px;
+      }
+
+      .card {
+        border-radius: 22px;
+      }
+
+      .main {
+        padding: 34px 22px 28px;
+      }
+
+      .brand {
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        font-size: 37px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .side {
+        padding: 28px 20px 34px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <center><p>We will contact you soon through WhatsApp / Email!</p></center>
+  <main class="page-shell">
+    <div class="blob one"></div>
+    <div class="blob two"></div>
+
+    <section class="card" aria-label="Guitar PDF Notes access page">
+      <div class="top-bar"></div>
+      <div class="content">
+        <div class="main">
+          <div class="brand">
+            <div class="brand-mark">♪</div>
+            <span>Guitar Dojo</span>
+          </div>
+
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            Payment Successful
+          </div>
+
+          <h1>Your Guitar PDF Notes are <span class="gradient-text">ready!</span></h1>
+
+          <p class="subtitle">
+            Thank you for your purchase. Click the button below to open your Guitar PDF Notes in Google Drive and start learning.
+          </p>
+
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              href="https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open PDF Notes <span aria-hidden="true">↗</span>
+            </a>
+
+            <button class="btn btn-secondary" id="copyBtn" type="button">
+              Copy Access Link
+            </button>
+          </div>
+
+          <div class="note">
+            <div class="note-icon">i</div>
+            <div>
+              Please save this page or the access link for future reference. If you face any issue, reply to your purchase email and our team will help you.
+            </div>
+          </div>
+        </div>
+
+        <aside class="side" aria-hidden="true">
+          <div class="preview-card">
+            <div class="preview-cover">
+              <div class="guitar-icon">🎸</div>
+              <strong>Guitar PDF Notes</strong>
+              <span>Beginner-friendly learning material</span>
+            </div>
+
+            <div class="preview-list">
+              <div class="preview-item"><span class="check">✓</span> Easy-to-follow lessons</div>
+              <div class="preview-item"><span class="check">✓</span> Practice-friendly notes</div>
+              <div class="preview-item"><span class="check">✓</span> Lifetime Google Drive access</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <p class="footer">Happy learning! — Team Guitar Dojo</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Access link copied</div>
+
+  <script>
+    const accessLink = "https://drive.google.com/drive/folders/1zyb2nA3k0VpJqyvgfyWuI1yTSzNwBbRu?usp=drive_link";
+    const copyBtn = document.getElementById("copyBtn");
+    const toast = document.getElementById("toast");
+
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(accessLink);
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1800);
+      } catch (error) {
+        window.prompt("Copy this link:", accessLink);
+      }
+    });
+  </script>
 </body>
 </html>
