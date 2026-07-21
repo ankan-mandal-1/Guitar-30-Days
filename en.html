@@ -522,9 +522,32 @@
         align-items: center;
         z-index: 999;
         box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+        transform: translateY(120%);
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      .banner.show {
+        transform: translateY(0);
+      }
+      .banner.congrats {
+        background: linear-gradient(90deg, rgba(16,61,31,0.95), rgba(22,22,26,0.9));
+        border-top: 1px solid var(--text-green);
       }
       .banner-price-info {
         text-align: left;
+      }
+      .banner-price-info .congrats-msg {
+        display: block;
+        color: var(--text-green);
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+        animation: pulseText 1.2s ease-in-out infinite;
+      }
+      @keyframes pulseText {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
       }
       .banner-price-info .price-now {
         color: #fff;
@@ -541,6 +564,7 @@
         padding: 12px 30px;
         font-size: 15px;
       }
+
 
       @media screen and (max-width: 480px) {
         h1 { font-size: 26px; }
@@ -628,13 +652,13 @@
       </script>
 
       <p class="sub-heading">
-        Step-By-Step Lessons! Start Now for Only ₹499 – Limited Time Offer!
+        Step-By-Step Lessons! Start Now for Only ₹800 – Limited Time Offer!
       </p>
 
       <div class="rating-price-trust">
         <p>⭐ 1158+ of learners have joined.</p>
         <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">
-          Buy Now @ ₹499/- <span class="strike">₹799</span>
+          Buy Now @ ₹800/- <span class="strike">₹1199</span>
         </a>
       </div>
 
@@ -741,7 +765,7 @@
 
       <div class="center" style="margin: 40px 0;">
         <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">
-          Buy Now @ ₹499/- <span class="strike">₹799</span>
+          Buy Now @ ₹800/- <span class="strike">₹1199</span>
         </a>
       </div>
 
@@ -885,14 +909,30 @@
       </footer>
     </div>
 
-    <!-- Sticky Conversion Bar -->
-    <div class="banner">
-      <div class="banner-price-info">
-        <span class="price-now">₹499/-</span>
-        <span class="price-old">₹ <span class="strike">699</span></span>
+    <!-- Sticky Conversion Bar (hidden initially, reveals after 15s as a "you won a discount" surprise) -->
+    <div class="banner" id="stickyBanner">
+      <div class="banner-price-info" id="bannerPriceInfo">
+        <span class="price-now">₹800/-</span>
+        <span class="price-old">₹ <span class="strike">1199</span></span>
       </div>
       <a href="https://pages.razorpay.com/pl_Pv5CnxGvF0n1ji/view" class="btn">Buy Now</a>
     </div>
+
+    <script>
+      (function () {
+        var banner = document.getElementById("stickyBanner");
+        var priceInfo = document.getElementById("bannerPriceInfo");
+
+        setTimeout(function () {
+          priceInfo.innerHTML =
+            '<span class="congrats-msg">🎉 Congratulations! You unlocked the discount</span>' +
+            '<span class="price-now">₹499/-</span>' +
+            '<span class="price-old">₹ <span class="strike">800</span></span>';
+          banner.classList.add("congrats");
+          banner.classList.add("show");
+        }, 13000);
+      })();
+    </script>
 
   </body>
 </html>
